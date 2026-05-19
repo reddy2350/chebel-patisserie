@@ -152,92 +152,148 @@
   }
   .btn--ghost-dark:hover { background: var(--c-brown); color: var(--c-cream); border-color: var(--c-brown); }
 
-  /* ---- Nav ---- */
+  /* ---- Topbar (luxury utility sliver) ---- */
+  .topbar {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 51;
+    background: #150A2E;
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+    color: rgba(232, 221, 245, .72);
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    padding: 9px 0;
+    transition: transform .45s cubic-bezier(.7,0,.2,1), opacity .35s ease;
+  }
+  .topbar__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(14px, 2vw, 28px);
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .topbar a {
+    color: var(--c-cream);
+    border-bottom: 1px solid rgba(255, 255, 255, .25);
+    padding-bottom: 1px;
+    transition: border-color .3s, color .3s;
+  }
+  .topbar a:hover { color: #fff; border-bottom-color: #fff; }
+  .topbar__sep { color: rgba(255, 255, 255, .35); font-size: 8px; }
+  .topbar.is-tucked { transform: translateY(-100%); opacity: 0; pointer-events: none; }
+
+  /* ---- Nav (luxury maison — centered wordmark + flanking rails) ---- */
   .nav {
     position: fixed;
-    top: 0; left: 0; right: 0;
+    top: 38px;
+    left: 0; right: 0;
     z-index: 50;
-    padding: 22px 0;
-    transition: background-color .4s ease, padding .4s ease, border-color .4s ease;
+    padding: 20px 0;
+    transition: background-color .4s ease, padding .4s ease, border-color .4s ease, top .45s cubic-bezier(.7,0,.2,1);
     border-bottom: 1px solid transparent;
   }
   .nav.is-scrolled {
+    top: 0;
     background: rgba(30, 15, 56, .82);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     padding: 14px 0;
     border-bottom-color: rgba(255, 255, 255, .15);
   }
+
   .nav__row {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    justify-content: space-between;
-    gap: 24px;
+    gap: 32px;
   }
+
+  /* Centered wordmark */
   .brand {
-    display: inline-flex;
-    align-items: baseline;
-    gap: 10px;
+    grid-column: 2;
+    display: grid;
+    justify-items: center;
+    gap: 4px;
     color: var(--c-cream);
+    text-align: center;
+    padding: 0 6px;
+    transition: transform .4s ease;
   }
-  .brand__mark {
-    font-family: var(--f-serif);
-    font-weight: 500;
-    font-style: italic;
-    color: var(--c-gold);
-    font-size: 28px;
-    line-height: 1;
+  .brand:hover { transform: translateY(-1px); }
+  .brand__rule {
+    width: 40px; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--c-cream), transparent);
+    opacity: .7;
+    margin-bottom: 4px;
   }
-  .brand__name {
-    font-family: var(--f-serif);
-    font-size: 22px;
-    letter-spacing: 0.34em;
-    text-transform: uppercase;
-    color: var(--c-cream);
-  }
-  .brand__sub {
+  .brand__pre {
     font-size: 9px;
     letter-spacing: 0.42em;
     text-transform: uppercase;
-    color: var(--c-gold);
-    margin-left: 4px;
-    align-self: center;
-    transform: translateY(-2px);
+    color: var(--c-cream);
+    opacity: .72;
   }
+  .brand__name {
+    font-family: var(--f-serif);
+    font-weight: 500;
+    font-size: clamp(28px, 2.6vw, 36px);
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--c-cream);
+    line-height: 1;
+    padding-left: 0.32em;
+  }
+  .brand__post {
+    font-size: 8px;
+    letter-spacing: 0.46em;
+    text-transform: uppercase;
+    color: rgba(232, 221, 245, .62);
+    margin-top: 2px;
+  }
+  .nav.is-scrolled .brand__name { font-size: clamp(20px, 1.8vw, 24px); }
+  .nav.is-scrolled .brand__rule { width: 28px; margin-bottom: 2px; }
+  .nav.is-scrolled .brand__pre,
+  .nav.is-scrolled .brand__post { font-size: 8px; letter-spacing: 0.4em; }
 
+  /* Link rails */
   .nav__links {
     display: flex;
-    gap: 38px;
     list-style: none;
     margin: 0; padding: 0;
+    gap: clamp(20px, 2.4vw, 40px);
   }
+  .nav__links--left  { justify-self: start; grid-column: 1; }
+  .nav__links--right { justify-self: end;   grid-column: 3; }
+
   .nav__links a {
     font-size: 11px;
-    letter-spacing: 0.28em;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--c-text-on-dark);
     position: relative;
     padding-bottom: 4px;
+    white-space: nowrap;
   }
   .nav__links a::after {
     content: "";
     position: absolute; left: 0; right: 100%; bottom: 0;
-    height: 1px; background: var(--c-gold);
+    height: 1px; background: var(--c-cream);
     transition: right .4s cubic-bezier(.2,.7,.2,1);
   }
   .nav__links a:hover { color: var(--c-cream); }
   .nav__links a:hover::after { right: 0; }
 
-  .nav__cta {
-    font-size: 11px;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    color: var(--c-gold);
-    border: 1px solid var(--c-gold);
-    padding: 10px 18px;
-    transition: background .3s, color .3s;
+  .nav__order {
+    color: var(--c-cream) !important;
+    border: 1px solid rgba(255, 255, 255, .4);
+    padding: 9px 16px 8px;
+    transition: background .3s, color .3s, border-color .3s;
   }
-  .nav__cta:hover { background: var(--c-gold); color: var(--c-bg); }
+  .nav__order::after { display: none !important; }
+  .nav__order:hover { background: var(--c-cream); color: var(--c-bg) !important; border-color: var(--c-cream); }
 
   .hamburger {
     display: none;
@@ -246,6 +302,8 @@
     border: 0;
     padding: 0;
     position: relative;
+    grid-column: 3;
+    justify-self: end;
   }
   .hamburger span {
     position: absolute; left: 0; right: 0; height: 1px; background: var(--c-cream);
@@ -825,9 +883,18 @@
   }
 
   /* ---- Responsive ---- */
-  @media (max-width: 880px) {
-    .nav__links, .nav__cta { display: none; }
+  @media (max-width: 1080px) {
+    .nav__links { display: none; }
     .hamburger { display: block; }
+    .brand__pre, .brand__post { font-size: 8px; letter-spacing: 0.38em; }
+    .brand__name { font-size: clamp(22px, 6vw, 28px); }
+    .topbar { font-size: 9px; letter-spacing: 0.22em; padding: 7px 0; }
+    .topbar__row { gap: 12px; }
+    .topbar__row > span:nth-child(1),
+    .topbar__row > span:nth-child(2),
+    .topbar__row > span:nth-child(4) { display: none; }
+  }
+  @media (max-width: 880px) {
     .hero__inner { padding-block: 140px 110px; }
     .hero__meta-row { justify-content: center; text-align: center; }
     .spotlight__media { aspect-ratio: 5 / 4; min-height: 0; }
@@ -844,26 +911,39 @@
 </head>
 <body>
 
+<!-- TOPBAR -->
+<div class="topbar" id="topbar">
+  <div class="container topbar__row">
+    <span>Complimentary citywide delivery on orders over $80</span>
+    <span class="topbar__sep" aria-hidden="true">✦</span>
+    <span>Mar Mikhaël &middot; Beirut</span>
+    <span class="topbar__sep" aria-hidden="true">✦</span>
+    <span>Bespoke commissions <a href="#custom">+961 1 200 819</a></span>
+  </div>
+</div>
+
 <!-- NAV -->
 <header class="nav" id="nav">
   <div class="container nav__row">
-    <a href="#top" class="brand" aria-label="Chebel Patisserie, home">
-      <span class="brand__mark">C</span>
-      <span class="brand__name">Chebel</span>
-      <span class="brand__sub">Patisserie</span>
-    </a>
 
-    <nav aria-label="Primary">
-      <ul class="nav__links">
-        <li><a href="#collections">Collections</a></li>
-        <li><a href="#signature">Signatures</a></li>
-        <li><a href="#about">Our Craft</a></li>
-        <li><a href="#custom">Custom Cakes</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-      </ul>
+    <nav class="nav__links nav__links--left" aria-label="Primary, left">
+      <a href="#collections">Collections</a>
+      <a href="#signature">Signatures</a>
+      <a href="#about">Our Craft</a>
     </nav>
 
-    <a href="#custom" class="nav__cta">Order</a>
+    <a href="#top" class="brand" aria-label="Chebel Patisserie, home">
+      <span class="brand__rule" aria-hidden="true"></span>
+      <span class="brand__pre">Maison de Pâtisserie</span>
+      <span class="brand__name">Chebel</span>
+      <span class="brand__post">Est. MMXIX &middot; Beirut</span>
+    </a>
+
+    <nav class="nav__links nav__links--right" aria-label="Primary, right">
+      <a href="#custom">Custom Cakes</a>
+      <a href="#gallery">Journal</a>
+      <a href="#custom" class="nav__order">Order <span aria-hidden="true">↗</span></a>
+    </nav>
 
     <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
       <span></span><span></span><span></span>
@@ -1324,9 +1404,14 @@
 </footer>
 
 <script>
-  // Nav scroll state
-  const nav = document.getElementById('nav');
-  const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 32);
+  // Nav + topbar scroll state
+  const nav    = document.getElementById('nav');
+  const topbar = document.getElementById('topbar');
+  const onScroll = () => {
+    const scrolled = window.scrollY > 32;
+    nav.classList.toggle('is-scrolled', scrolled);
+    if (topbar) topbar.classList.toggle('is-tucked', scrolled);
+  };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
