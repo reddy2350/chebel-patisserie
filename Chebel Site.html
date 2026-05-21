@@ -3,466 +3,990 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Chebel Patisserie — Handcrafted for Life's Sweetest Moments</title>
-<meta name="description" content="Chebel Patisserie. Seven years of heritage. Handcrafted celebration cakes, brownies, and nostalgic desserts made with the finest couverture chocolate and natural ingredients." />
+<title>Chebel Patisserie — Maison de Douceur</title>
+<meta name="description" content="Chebel Patisserie — celebration cakes, brownies and nostalgic desserts, composed by hand in small batches in Beirut." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Lato:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
 <style>
   :root {
-    --c-bg:        #2D1B4E;
-    --c-bg-2:      #1E0F38;
-    --c-gold:      #FFFFFF;
-    --c-gold-soft: #E8DDF5;
-    --c-cream:     #F4EFFA;
-    --c-offwhite:  #FBF8FE;
-    --c-brown:     #5B3A8C;
-    --c-brown-2:   #4A2F75;
-    --c-amber:     #F4EFFA;
-
-    --c-text-on-dark: #E8DDF5;
-    --c-text-muted:   #A693C8;
-    --c-accent-light: #6B3FA0;
-
-    --f-serif: "Cormorant Garamond", "Hoefler Text", Garamond, serif;
-    --f-sans:  "Lato", system-ui, -apple-system, sans-serif;
-
-    --container: 1320px;
-    --gutter: clamp(20px, 4vw, 56px);
+    --c-cream:        #F6EFE6;
+    --c-cream-2:      #EFE5D5;
+    --c-cream-3:      #E8DCC9;
+    --c-deep:         #2A1B22;
+    --c-deep-2:       #3A2530;
+    --c-deep-hover:   #38222B;
+    --c-body:         #5B4754;
+    --c-body-soft:    #7A6471;
+    --c-heading:      #5C3242;
+    --c-heading-2:    #B98AA0;
+    --c-bl-text:      #6B3A4A;
+    --c-bl-btn:       #6B3A4A;
+    --c-bl-btn-hover: #4F2937;
+    --c-accent:       #C9744F;
+    --c-rule:         rgba(42, 27, 34, 0.12);
+    --c-rule-strong:  rgba(42, 27, 34, 0.22);
+    --f-serif:        "Cormorant Garamond", "Hoefler Text", Garamond, serif;
+    --f-sans:         "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --container:      1320px;
+    --gutter:         clamp(20px, 4vw, 56px);
   }
-
   *, *::before, *::after { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
     margin: 0;
-    background: var(--c-bg);
-    color: var(--c-text-on-dark);
     font-family: var(--f-sans);
-    font-weight: 300;
-    font-size: 17px;
+    font-weight: 400;
+    font-size: 16px;
     line-height: 1.65;
+    background: var(--c-cream);
+    color: var(--c-deep);
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
   }
   img { display: block; max-width: 100%; height: auto; }
-  a  { color: inherit; text-decoration: none; }
-  button { font: inherit; cursor: pointer; }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; cursor: pointer; background: none; border: 0; color: inherit; }
+  .container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); position: relative; }
 
-  .container {
-    width: 100%;
-    max-width: var(--container);
-    margin-inline: auto;
-    padding-inline: var(--gutter);
-  }
-
-  /* ---- Type ---- */
-  .eyebrow {
-    font-family: var(--f-sans);
-    font-weight: 400;
-    font-size: 11px;
-    letter-spacing: 0.32em;
-    text-transform: uppercase;
-    color: var(--c-gold);
-  }
-  .eyebrow.on-cream { color: var(--c-brown); }
-
-  h1, h2, h3 {
+  h1, h2, h3, h4 {
     font-family: var(--f-serif);
-    font-weight: 500;
-    color: var(--c-cream);
+    font-weight: 400;
+    color: var(--c-heading);
     margin: 0;
-    line-height: 1.08;
-    letter-spacing: 0.005em;
+    line-height: 1.04;
+    letter-spacing: -0.005em;
     text-wrap: balance;
   }
-  h1 { font-size: clamp(44px, 7.4vw, 108px); }
-  h2 { font-size: clamp(34px, 4.6vw, 60px); }
+  h2 { font-size: clamp(36px, 5vw, 64px); }
   h3 { font-size: clamp(22px, 2.2vw, 30px); }
+  em { font-style: italic; color: var(--c-heading-2); font-weight: 300; }
 
-  .on-cream h1, .on-cream h2, .on-cream h3 { color: var(--c-brown); }
-
-  .lede {
-    font-family: var(--f-serif);
-    font-style: italic;
-    font-size: clamp(18px, 1.6vw, 22px);
-    color: var(--c-text-on-dark);
-    max-width: 60ch;
-  }
-
-  .divider {
-    width: 64px;
-    height: 1px;
-    background: var(--c-gold);
-    border: 0;
-    margin: 0;
-  }
-  .divider.center { margin-inline: auto; }
-
-  /* ---- Buttons ---- */
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 14px;
-    padding: 16px 30px;
-    border: 1px solid var(--c-gold);
-    color: var(--c-gold);
-    background: transparent;
+  .eyebrow {
+    display: inline-block;
     font-family: var(--f-sans);
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    position: relative;
-    overflow: hidden;
-    transition: color .35s ease, border-color .35s ease, background-color .35s ease;
-  }
-  .btn::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(115deg, transparent 25%, rgba(139, 95, 191, .55) 50%, transparent 75%);
-    transform: translateX(-120%);
-    transition: transform .9s cubic-bezier(.2,.7,.2,1);
-    pointer-events: none;
-  }
-  .btn:hover { color: var(--c-bg); background: var(--c-amber); border-color: var(--c-amber); }
-  .btn:hover::before { transform: translateX(120%); }
-  .btn .arrow { width: 22px; height: 1px; background: currentColor; position: relative; transition: width .3s; }
-  .btn .arrow::after {
-    content: "";
-    position: absolute; right: 0; top: 50%;
-    width: 7px; height: 7px;
-    border-right: 1px solid currentColor; border-top: 1px solid currentColor;
-    transform: translateY(-50%) rotate(45deg);
-  }
-  .btn:hover .arrow { width: 32px; }
-
-  .btn--solid {
-    background: var(--c-amber);
-    color: var(--c-bg);
-    border-color: var(--c-amber);
-  }
-  .btn--solid:hover { background: var(--c-gold); border-color: var(--c-gold); color: var(--c-bg); }
-
-  .btn--ghost-dark {
-    border-color: var(--c-brown);
-    color: var(--c-brown);
-  }
-  .btn--ghost-dark:hover { background: var(--c-brown); color: var(--c-cream); border-color: var(--c-brown); }
-
-  /* ---- Topbar (luxury utility sliver) ---- */
-  .topbar {
-    position: fixed;
-    inset: 0 0 auto 0;
-    z-index: 51;
-    background: #150A2E;
-    border-bottom: 1px solid rgba(255, 255, 255, .08);
-    color: rgba(232, 221, 245, .72);
+    font-weight: 500;
     font-size: 10px;
-    letter-spacing: 0.28em;
+    letter-spacing: 0.36em;
     text-transform: uppercase;
-    padding: 9px 0;
-    transition: transform .45s cubic-bezier(.7,0,.2,1), opacity .35s ease;
+    color: var(--c-heading);
   }
-  .topbar__row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: clamp(14px, 2vw, 28px);
-    flex-wrap: nowrap;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-  .topbar a {
-    color: var(--c-cream);
-    border-bottom: 1px solid rgba(255, 255, 255, .25);
-    padding-bottom: 1px;
-    transition: border-color .3s, color .3s;
-  }
-  .topbar a:hover { color: #fff; border-bottom-color: #fff; }
-  .topbar__sep { color: rgba(255, 255, 255, .35); font-size: 8px; }
-  .topbar.is-tucked { transform: translateY(-100%); opacity: 0; pointer-events: none; }
+  .eyebrow.on-dark { color: var(--c-heading-2); }
 
-  /* ---- Nav (luxury maison — centered wordmark + flanking rails) ---- */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    gap: 8px;
+    border-radius: 999px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: background-color .25s, color .25s, transform .25s, box-shadow .25s;
+    text-decoration: none;
+  }
+  .btn--solid { background: var(--c-deep); color: #fff; font-size: 13px; padding: 12px 24px; }
+  .btn--solid:hover { background: var(--c-deep-hover); }
+  .btn--outline { background: transparent; color: var(--c-deep); font-size: 13px; padding: 11px 22px; border: 1px solid var(--c-deep); }
+  .btn--outline:hover { background: var(--c-deep); color: #fff; }
+  .btn--cream { background: #fff; color: var(--c-deep); font-size: 13px; padding: 12px 24px; }
+  .btn--cream:hover { background: rgba(255,255,255,0.86); }
+
+  /* ===== NAV ===== */
   .nav {
-    position: fixed;
-    top: 38px;
-    left: 0; right: 0;
+    position: fixed; top: 0; left: 0; right: 0;
     z-index: 50;
-    padding: 20px 0;
-    transition: background-color .4s ease, padding .4s ease, border-color .4s ease, top .45s cubic-bezier(.7,0,.2,1);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px clamp(16px, 4vw, 40px);
+    color: var(--c-deep-2);
+    transition: background-color .35s, padding .35s, border-color .35s, box-shadow .35s;
     border-bottom: 1px solid transparent;
   }
   .nav.is-scrolled {
-    top: 0;
-    background: rgba(30, 15, 56, .82);
+    background: rgba(246, 239, 230, 0.86);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
-    padding: 14px 0;
-    border-bottom-color: rgba(255, 255, 255, .15);
+    border-bottom-color: var(--c-rule);
+    padding-block: 12px;
   }
-
-  .nav__row {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    gap: 32px;
-  }
-
-  /* Centered wordmark */
-  .brand {
-    grid-column: 2;
-    display: grid;
-    justify-items: center;
-    gap: 4px;
-    color: var(--c-cream);
-    text-align: center;
-    padding: 0 6px;
-    transition: transform .4s ease;
-  }
-  .brand:hover { transform: translateY(-1px); }
-  .brand__rule {
-    width: 40px; height: 1px;
-    background: linear-gradient(90deg, transparent, var(--c-cream), transparent);
-    opacity: .7;
-    margin-bottom: 4px;
-  }
-  .brand__pre {
-    font-size: 9px;
-    letter-spacing: 0.42em;
-    text-transform: uppercase;
-    color: var(--c-cream);
-    opacity: .72;
+  .brand { display: inline-flex; align-items: center; gap: 12px; color: var(--c-deep); }
+  .brand__mono {
+    width: 40px; height: 40px;
+    border: 1px solid var(--c-deep);
+    border-radius: 50%;
+    display: grid; place-items: center;
+    font-family: var(--f-serif); font-style: italic; font-size: 20px; line-height: 1;
   }
   .brand__name {
     font-family: var(--f-serif);
-    font-weight: 500;
-    font-size: clamp(28px, 2.6vw, 36px);
-    letter-spacing: 0.32em;
-    text-transform: uppercase;
-    color: var(--c-cream);
-    line-height: 1;
-    padding-left: 0.32em;
+    font-size: 26px;
+    letter-spacing: 0.04em;
   }
-  .brand__post {
-    font-size: 8px;
-    letter-spacing: 0.46em;
-    text-transform: uppercase;
-    color: rgba(232, 221, 245, .62);
-    margin-top: 2px;
-  }
-  .nav.is-scrolled .brand__name { font-size: clamp(20px, 1.8vw, 24px); }
-  .nav.is-scrolled .brand__rule { width: 28px; margin-bottom: 2px; }
-  .nav.is-scrolled .brand__pre,
-  .nav.is-scrolled .brand__post { font-size: 8px; letter-spacing: 0.4em; }
+  .brand__tm { font-family: var(--f-sans); font-size: 10px; vertical-align: super; margin-left: 2px; }
 
-  /* Link rails */
-  .nav__links {
-    display: flex;
-    list-style: none;
-    margin: 0; padding: 0;
-    gap: clamp(20px, 2.4vw, 40px);
+  .nav__pill {
+    display: none;
+    align-items: center;
+    gap: 4px;
+    background: rgba(255, 252, 246, 0.72);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 5px 5px 5px 22px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 6px 24px -16px rgba(42, 27, 34, 0.4);
   }
-  .nav__links--left  { justify-self: start; grid-column: 1; }
-  .nav__links--right { justify-self: end;   grid-column: 3; }
-
-  .nav__links a {
-    font-size: 11px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--c-text-on-dark);
-    position: relative;
-    padding-bottom: 4px;
+  @media (min-width: 1024px) { .nav__pill { display: inline-flex; } }
+  .nav__pill a {
+    font-size: 13px; padding: 9px 14px;
+    color: var(--c-body);
+    letter-spacing: 0.02em;
+    transition: color .2s;
     white-space: nowrap;
   }
-  .nav__links a::after {
-    content: "";
-    position: absolute; left: 0; right: 100%; bottom: 0;
-    height: 1px; background: var(--c-cream);
-    transition: right .4s cubic-bezier(.2,.7,.2,1);
-  }
-  .nav__links a:hover { color: var(--c-cream); }
-  .nav__links a:hover::after { right: 0; }
+  .nav__pill a:hover { color: var(--c-deep); }
+  .nav__pill a.is-active { color: var(--c-deep); font-weight: 600; }
+  .nav__pill a.btn--solid { color: #fff; }
+  .nav__pill a.btn--solid:hover { color: #fff; background: var(--c-deep-hover); }
 
-  .nav__order {
-    color: var(--c-cream) !important;
-    border: 1px solid rgba(255, 255, 255, .4);
-    padding: 9px 16px 8px;
-    transition: background .3s, color .3s, border-color .3s;
-  }
-  .nav__order::after { display: none !important; }
-  .nav__order:hover { background: var(--c-cream); color: var(--c-bg) !important; border-color: var(--c-cream); }
-
-  .hamburger {
+  .nav__tools { display: flex; align-items: center; gap: 12px; color: var(--c-deep-2); }
+  @media (min-width: 640px) { .nav__tools { gap: 22px; } }
+  .nav__tool {
     display: none;
-    width: 38px; height: 28px;
-    background: transparent;
-    border: 0;
-    padding: 0;
+    align-items: center; gap: 8px;
+    font-size: 13px; font-weight: 500;
+    transition: opacity .2s;
+  }
+  .nav__tool:hover { opacity: 0.7; }
+  @media (min-width: 640px) { .nav__tool { display: inline-flex; } }
+
+  .nav__burger {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 42px; height: 42px;
+    background: rgba(255, 252, 246, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 999px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--c-deep);
     position: relative;
-    grid-column: 3;
-    justify-self: end;
   }
-  .hamburger span {
-    position: absolute; left: 0; right: 0; height: 1px; background: var(--c-cream);
-    transition: transform .35s, opacity .25s, top .35s;
-  }
-  .hamburger span:nth-child(1) { top: 8px; }
-  .hamburger span:nth-child(2) { top: 14px; }
-  .hamburger span:nth-child(3) { top: 20px; }
-  .hamburger.is-open span:nth-child(1) { top: 14px; transform: rotate(45deg); background: var(--c-gold); }
-  .hamburger.is-open span:nth-child(2) { opacity: 0; }
-  .hamburger.is-open span:nth-child(3) { top: 14px; transform: rotate(-45deg); background: var(--c-gold); }
+  @media (min-width: 1024px) { .nav__burger { display: none; } }
+  .nav__burger svg { position: absolute; transition: opacity .3s, transform .3s; }
+  .nav__burger .ic-x { opacity: 0; transform: rotate(-90deg) scale(0.5); }
+  .nav__burger.is-open .ic-menu { opacity: 0; transform: rotate(90deg) scale(0.5); }
+  .nav__burger.is-open .ic-x { opacity: 1; transform: rotate(0) scale(1); }
 
-  .mobile-menu {
-    position: fixed;
-    inset: 0;
-    background: var(--c-bg-2);
-    z-index: 45;
-    padding: 120px var(--gutter) 60px;
-    transform: translateY(-100%);
-    transition: transform .55s cubic-bezier(.7,0,.2,1);
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
+  /* Mobile drawer */
+  .drawer-overlay {
+    position: fixed; inset: 0; z-index: 40;
+    background: rgba(42, 27, 34, 0.45);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    opacity: 0; pointer-events: none;
+    transition: opacity .3s;
   }
-  .mobile-menu.is-open { transform: translateY(0); }
-  .mobile-menu a {
+  .drawer-overlay.is-open { opacity: 1; pointer-events: auto; }
+  @media (min-width: 1024px) { .drawer-overlay, .drawer { display: none; } }
+  .drawer {
+    position: fixed; top: 0; right: 0; bottom: 0; z-index: 45;
+    width: 85%; max-width: 360px;
+    background: rgba(246, 239, 230, 0.97);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    transform: translateX(100%);
+    transition: transform .5s cubic-bezier(.22,1,.36,1);
+    padding: 96px 32px 32px;
+    box-shadow: -20px 0 60px -20px rgba(42, 27, 34, .3);
+    display: flex; flex-direction: column; gap: 28px;
+  }
+  .drawer.is-open { transform: translateX(0); }
+  .drawer a {
     font-family: var(--f-serif);
-    font-size: 34px;
-    color: var(--c-cream);
-    border-bottom: 1px solid rgba(255, 255, 255, .18);
-    padding-bottom: 16px;
+    font-size: 30px;
+    color: var(--c-deep);
+    padding: 14px 0;
+    border-bottom: 1px solid var(--c-rule);
   }
-  .mobile-menu a:hover { color: var(--c-gold); }
+  .drawer a:hover { color: var(--c-heading); }
 
-  /* ---- Hero ---- */
+  /* ===== HERO ===== */
   .hero {
     position: relative;
     min-height: 100vh;
-    display: grid;
-    align-items: end;
     overflow: hidden;
-    isolation: isolate;
-    background: var(--c-bg);
+    background: var(--c-cream);
+    padding-top: 96px;
   }
-  .hero__img {
+  .hero__bg {
+    position: absolute; inset: 0; overflow: hidden;
+    transform: translateZ(0);
+  }
+  .hero__bg video {
     position: absolute; inset: 0;
-    background-image:
-      linear-gradient(180deg, rgba(30, 15, 56,.45) 0%, rgba(30, 15, 56,.55) 45%, rgba(30, 15, 56,.92) 100%),
-      url("https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=2400&q=80");
-    background-size: cover;
-    background-position: center 38%;
-    transform: scale(1.04);
-    animation: kenburns 18s ease-out forwards;
-    z-index: -2;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+    filter: saturate(1.02);
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
   }
-  @keyframes kenburns { to { transform: scale(1); } }
-  .hero::after {
+  .hero__bg::after {
     content: "";
     position: absolute; inset: 0;
-    background: radial-gradient(ellipse at 70% 30%, rgba(255, 255, 255,.18), transparent 55%),
-                radial-gradient(ellipse at 10% 80%, rgba(91, 58, 140,.45), transparent 60%);
+    background:
+      linear-gradient(180deg, rgba(246,239,230,.92) 0%, rgba(246,239,230,.55) 32%, rgba(246,239,230,.10) 55%, rgba(246,239,230,0) 70%),
+      radial-gradient(80% 60% at 10% 100%, rgba(246,239,230,.78) 0%, rgba(246,239,230,0) 55%),
+      radial-gradient(70% 50% at 90% 100%, rgba(42,27,34,.20) 0%, rgba(42,27,34,0) 60%);
     pointer-events: none;
-    z-index: -1;
+  }
+  @keyframes cbBoomerang { 0% { transform: none; } 100% { transform: none; } }
+  @media (prefers-reduced-motion: reduce) {
+    .hero__bg::before { animation: none; }
   }
 
-  .hero__inner {
-    padding-block: 160px 90px;
-    display: grid;
-    gap: 36px;
+  .hero__copy {
+    position: relative; z-index: 2;
+    text-align: center;
+    padding: 40px 16px 0;
     max-width: 1100px;
+    margin: 0 auto;
   }
-  .hero__eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 14px;
-    color: var(--c-gold);
+  .hero__title {
+    font-weight: 500;
+    color: var(--c-heading);
+    line-height: 0.98;
+    letter-spacing: -0.015em;
+    font-size: clamp(2.4rem, 7.5vw, 6.2rem);
+    margin: 22px 0 0;
+    max-width: 18ch;
+    margin-inline: auto;
+    text-shadow: 0 2px 18px rgba(246, 239, 230, 0.85), 0 1px 0 rgba(246, 239, 230, 0.6);
   }
-  .hero__eyebrow::before {
-    content: ""; width: 36px; height: 1px; background: var(--c-gold); opacity: .8;
+  .hero__title em { color: #6B3A4A; font-weight: 400; font-style: italic; }
+  .hero__lede {
+    margin: 26px auto 0;
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--c-deep-2);
+    max-width: 34rem;
+    padding: 0 16px;
+    text-shadow: 0 1px 12px rgba(246, 239, 230, 0.8);
   }
+  @media (min-width: 768px) { .hero__lede { font-size: 17px; } }
 
-  .hero h1 { font-weight: 400; color: var(--c-cream); }
-  .hero h1 em { font-style: italic; color: var(--c-gold); font-weight: 400; }
-  .hero__sub {
+  .hero__bl, .hero__br {
+    position: absolute; z-index: 2;
+  }
+  .hero__bl {
+    left: 16px; right: 16px;
+    bottom: 28px;
+    max-width: 380px;
+  }
+  @media (min-width: 640px) { .hero__bl { right: auto; left: 24px; bottom: 36px; } }
+  @media (min-width: 768px) { .hero__bl { left: 40px; bottom: 48px; } }
+  .hero__bl-head {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: rgba(255, 252, 246, 0.95);
+    font-size: 13px; font-weight: 500;
+    letter-spacing: 0.04em;
+    margin-bottom: 12px;
+  }
+  .hero__bl-copy {
+    color: rgba(255, 252, 246, 0.88);
+    font-size: 13px; line-height: 1.65;
+    margin: 0 0 22px;
+    max-width: 22rem;
+  }
+  .hero__bl-row { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+  .hero__bl-link {
+    color: #fff; font-size: 13px; font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: opacity .2s;
+  }
+  .hero__bl-link:hover { opacity: 0.78; }
+
+  .hero__br {
+    display: none;
+    right: 24px; bottom: 36px;
+    align-items: center; gap: 10px;
+    color: rgba(255, 252, 246, 0.92);
+    font-size: 13px;
+  }
+  @media (min-width: 768px) { .hero__br { display: inline-flex; right: 40px; bottom: 48px; } }
+  .hero__br-play {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: grid; place-items: center;
+    color: #fff;
+    transition: background .25s;
+  }
+  .hero__br-play:hover { background: rgba(255, 255, 255, 0.36); }
+  .hero__br-time { color: rgba(255, 252, 246, 0.6); }
+
+  /* ===== MARQUEE ===== */
+  .marquee {
+    background: var(--c-deep);
+    color: rgba(255, 252, 246, 0.86);
+    overflow: hidden;
+    border-block: 1px solid rgba(255, 252, 246, 0.06);
+  }
+  .marquee__track {
+    display: flex; align-items: center; gap: 56px;
+    padding: 18px 0;
+    animation: marquee 38s linear infinite;
+    width: max-content;
+  }
+  .marquee__item {
+    display: inline-flex; align-items: center; gap: 16px;
     font-family: var(--f-serif);
     font-style: italic;
-    font-size: clamp(18px, 1.6vw, 22px);
-    color: rgba(232, 221, 245, .82);
-    max-width: 56ch;
+    font-size: 24px;
+    color: rgba(255, 252, 246, 0.92);
+    white-space: nowrap;
   }
-  .hero__cta-row {
-    display: flex;
-    align-items: center;
-    gap: 28px;
+  .marquee__dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--c-heading-2);
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee__track { animation: none; }
+  }
+
+  /* ===== PROMISE ===== */
+  .promise {
+    padding-block: clamp(80px, 10vw, 140px);
+    text-align: center;
+    background: var(--c-cream);
+  }
+  .promise__inner {
+    max-width: 880px;
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+    display: grid; gap: 22px; justify-items: center;
+  }
+  .promise__line {
+    font-family: var(--f-serif);
+    font-size: clamp(28px, 3.8vw, 48px);
+    line-height: 1.18;
+    color: var(--c-heading);
+    letter-spacing: 0.002em;
+    margin: 0;
+  }
+  .promise__line em { color: var(--c-heading-2); }
+  .promise__rule { width: 56px; height: 1px; background: var(--c-rule-strong); border: 0; margin: 4px 0; }
+  .promise__copy { color: var(--c-body); max-width: 56ch; margin: 0; }
+
+  /* ===== CARTE ===== */
+  .carte {
+    background: var(--c-cream-2);
+    padding-block: clamp(80px, 10vw, 140px);
+    position: relative;
+    overflow: hidden;
+  }
+  .carte__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(40px, 6vw, 84px);
+    align-items: start;
+    position: relative;
+  }
+  @media (min-width: 900px) {
+    .carte__inner { grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); }
+  }
+  .carte__giant {
+    position: absolute;
+    left: -12px; top: -28px;
+    font-family: var(--f-serif);
+    font-style: italic;
+    color: rgba(92, 50, 66, 0.10);
+    font-size: clamp(120px, 18vw, 260px);
+    line-height: 1;
+    letter-spacing: 0.02em;
+    pointer-events: none;
+    z-index: 0;
+    user-select: none;
+  }
+  .carte__photos {
+    position: relative; z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1.2fr 1fr;
+    gap: 14px;
+    aspect-ratio: 1 / 1.05;
+  }
+  .carte__photos > div {
+    background-size: cover; background-position: center;
+    border-radius: 8px;
+    border: 1px solid var(--c-rule);
+  }
+  .carte__photo--lead { grid-row: 1 / 3; }
+
+  .carte__list { position: relative; z-index: 1; padding-top: 16px; }
+  .carte__list h2 { font-style: italic; margin: 14px 0 30px; }
+  .carte__tabs {
+    display: flex; gap: 22px;
+    border-bottom: 1px solid var(--c-rule);
+    padding-bottom: 14px;
+    margin-bottom: 28px;
+    align-items: baseline;
     flex-wrap: wrap;
-    margin-top: 8px;
   }
-  .hero__since {
+  .carte__tab {
+    font-family: var(--f-serif);
+    font-style: italic;
+    font-size: 19px;
+    color: var(--c-body-soft);
+    position: relative;
+    padding: 4px 0;
+  }
+  .carte__tab.is-active { color: var(--c-heading); }
+  .carte__tab.is-active::after {
+    content: "";
+    position: absolute; left: 0; right: 0; bottom: -15px;
+    height: 1px; background: var(--c-heading);
+  }
+  .carte__items { list-style: none; margin: 0; padding: 0; display: grid; gap: 22px; }
+  .carte__item {
+    display: grid; grid-template-columns: 1fr auto;
+    align-items: baseline; gap: 16px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--c-rule);
+  }
+  .carte__item:last-child { border-bottom: 0; }
+  .carte__item-name {
+    font-family: var(--f-serif);
+    font-size: 22px;
+    color: var(--c-deep);
+    line-height: 1.15;
+  }
+  .carte__item-desc {
+    font-size: 13px;
+    color: var(--c-body);
+    margin-top: 6px;
+    max-width: 44ch;
+    line-height: 1.55;
+  }
+  .carte__item-price {
+    font-family: var(--f-serif);
+    font-style: italic;
+    font-size: 20px;
+    color: var(--c-heading);
+  }
+  .carte__cta { margin-top: 32px; display: flex; gap: 14px; flex-wrap: wrap; }
+
+  /* ===== SIGNATURE ===== */
+  .signature {
+    background: var(--c-cream);
+    padding-block: clamp(80px, 10vw, 140px);
+    position: relative;
+    overflow: hidden;
+  }
+  .signature__head { text-align: center; display: grid; gap: 10px; justify-items: center; margin-bottom: 56px; }
+  .signature__head h2 { font-style: italic; }
+  .signature__head .sub {
+    font-family: var(--f-serif); font-style: italic;
+    font-size: 19px;
+    color: var(--c-accent);
+  }
+
+  .signature__stage {
+    position: relative;
+    max-width: 1100px;
+    margin-inline: auto;
+    min-height: 580px;
+    display: grid; place-items: center;
+  }
+  .signature__product {
+    position: relative;
+    width: clamp(240px, 30vw, 380px);
+    aspect-ratio: 4 / 5;
+    border-radius: 200px 200px 30px 30px;
+    background: center / cover no-repeat url('https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=1400&q=85');
+    box-shadow: 0 50px 100px -42px rgba(42, 27, 34, .45);
+  }
+  .signature__product::after {
+    content: ""; position: absolute; inset: 4%;
+    border-radius: inherit;
+    border: 1px solid rgba(255, 255, 255, .5);
+    pointer-events: none;
+  }
+
+  .ing { position: absolute; display: inline-flex; align-items: center; gap: 12px; z-index: 2; }
+  .ing__avatar {
+    width: 54px; height: 54px;
+    border-radius: 50%;
+    background-size: cover; background-position: center;
+    border: 2px solid #fff;
+    box-shadow: 0 14px 40px -18px rgba(42,27,34,.35);
+    flex-shrink: 0;
+  }
+  .ing__line { display: grid; align-content: center; min-width: 130px; }
+  .ing__line::before {
+    content: ""; display: block;
+    border-top: 1px dashed var(--c-rule-strong);
+    margin-bottom: 6px;
+    opacity: 0.7;
+  }
+  .ing__label {
+    font-family: var(--f-serif);
+    font-style: italic;
+    color: var(--c-deep);
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  .ing--l1 { top: 8%;  left: 6%; }
+  .ing--l2 { top: 46%; left: 0%; }
+  .ing--l3 { top: 82%; left: 10%; }
+  .ing--r1 { top: 8%;  right: 6%; flex-direction: row-reverse; }
+  .ing--r2 { top: 46%; right: 0%; flex-direction: row-reverse; }
+  .ing--r3 { top: 82%; right: 10%; flex-direction: row-reverse; }
+  .ing--r1 .ing__line, .ing--r2 .ing__line, .ing--r3 .ing__line { text-align: right; }
+
+  .signature__name {
+    text-align: center;
+    margin-top: 36px;
+    font-family: var(--f-serif);
+    font-style: italic;
+    font-size: clamp(40px, 6vw, 76px);
+    color: var(--c-heading);
+    line-height: 1;
+  }
+  .signature__row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    align-items: start;
+    margin-top: 28px;
+    max-width: 1100px;
+    margin-inline: auto;
+  }
+  @media (min-width: 900px) {
+    .signature__row { grid-template-columns: 1fr auto 1fr; gap: 40px; }
+  }
+  .signature__copy {
+    font-size: 14px;
+    color: var(--c-body);
+    line-height: 1.7;
+    max-width: 36ch;
+  }
+  .signature__price { text-align: center; display: grid; gap: 12px; justify-items: center; }
+  .signature__price .from {
+    font-size: 10px; letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--c-body-soft);
+  }
+  .signature__price .amount {
+    font-family: var(--f-serif);
+    font-style: italic;
+    font-size: 40px;
+    color: var(--c-heading);
+    line-height: 1;
+  }
+  .signature__notes { display: grid; gap: 12px; }
+  @media (min-width: 900px) { .signature__notes { text-align: right; } }
+  .signature__notes p { margin: 0; font-size: 13.5px; color: var(--c-body); max-width: 32ch; }
+  @media (min-width: 900px) { .signature__notes p { margin-left: auto; } }
+  .signature__notes .availability {
+    font-family: var(--f-serif);
+    font-style: italic;
+    font-size: 16px;
+    color: var(--c-heading);
+  }
+
+  /* ===== PROCESS ===== */
+  .process {
+    background: var(--c-deep);
+    color: rgba(255, 252, 246, 0.85);
+    padding-block: clamp(80px, 10vw, 140px);
+    position: relative;
+    overflow: hidden;
+  }
+  .process::before {
+    content: ""; position: absolute;
+    width: 540px; height: 540px;
+    border-radius: 50%;
+    border: 1px dashed rgba(185, 138, 160, 0.22);
+    bottom: -260px; left: -180px;
+    pointer-events: none;
+  }
+  .process::after {
+    content: ""; position: absolute;
+    width: 420px; height: 420px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 252, 246, 0.06);
+    top: -160px; right: -140px;
+    pointer-events: none;
+  }
+  .process__head { text-align: center; margin-bottom: 56px; position: relative; z-index: 1; }
+  .process__head h2 {
+    color: #fff;
+    font-style: italic;
+    margin-top: 10px;
+  }
+  .process__head h2 em { color: var(--c-heading-2); }
+  .process__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 36px;
+    position: relative; z-index: 1;
+  }
+  @media (min-width: 768px) { .process__grid { grid-template-columns: repeat(3, 1fr); gap: 40px; } }
+  .process__step {
+    padding: 30px 28px;
+    border: 1px solid rgba(255, 252, 246, 0.10);
+    border-radius: 14px;
+    background: linear-gradient(180deg, rgba(255, 252, 246, 0.04), rgba(255, 252, 246, 0.01));
+    display: grid; gap: 14px;
+    align-content: start;
+  }
+  .process__num {
+    font-family: var(--f-serif);
+    font-style: italic;
+    font-size: 22px;
+    color: var(--c-heading-2);
+    letter-spacing: 0.04em;
+  }
+  .process__step h3 {
+    color: #fff;
+    font-style: italic;
+    font-size: 26px;
+    margin: 0;
+  }
+  .process__step p {
+    color: rgba(255, 252, 246, 0.7);
+    font-size: 14px; line-height: 1.65;
+    margin: 0;
+    max-width: 34ch;
+  }
+  .process__cta { margin-top: 56px; text-align: center; position: relative; z-index: 1; }
+  .process__cta .btn--cream { background: #fff; color: var(--c-deep); }
+
+  /* ===== GALLERY STRIP ===== */
+  .strip {
+    background: var(--c-cream);
+    padding-block: clamp(80px, 8vw, 110px);
+  }
+  .strip__head {
+    display: flex; align-items: end; justify-content: space-between;
+    margin-bottom: 36px;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .strip__head h2 { font-style: italic; }
+  .strip__head h2 em { color: var(--c-heading-2); }
+  .strip__head a {
+    font-size: 12px; letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--c-heading);
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--c-heading);
+  }
+  .strip__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  @media (min-width: 768px) { .strip__row { grid-template-columns: repeat(4, 1fr); } }
+  .strip__tile {
+    aspect-ratio: 1 / 1.15;
+    background-size: cover; background-position: center;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    transition: transform .5s ease;
+  }
+  .strip__tile:hover { transform: translateY(-6px); }
+  .strip__tile::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 55%, rgba(42, 27, 34, 0.55));
+    opacity: 0; transition: opacity .4s;
+  }
+  .strip__tile span {
+    position: absolute; left: 16px; bottom: 14px;
+    color: #fff;
+    font-family: var(--f-serif); font-style: italic;
+    z-index: 1; opacity: 0; transform: translateY(6px);
+    transition: opacity .4s, transform .4s;
+  }
+  .strip__tile:hover::after { opacity: 1; }
+  .strip__tile:hover span { opacity: 1; transform: none; }
+
+  /* ===== VISIT ===== */
+  .visit {
+    background: var(--c-cream-2);
+    padding-block: clamp(80px, 10vw, 130px);
+  }
+  .visit__card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 40px 80px -42px rgba(42, 27, 34, .22);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(20px, 3vw, 44px);
+    align-items: stretch;
+    padding: clamp(28px, 3vw, 44px);
+    position: relative; overflow: hidden;
+  }
+  @media (min-width: 900px) {
+    .visit__card { grid-template-columns: auto 1fr 1.1fr; }
+  }
+  .visit__city {
+    font-family: var(--f-serif);
+    font-style: italic;
+    font-size: clamp(56px, 7vw, 110px);
+    color: var(--c-heading);
+    line-height: 1;
+    letter-spacing: 0.02em;
+  }
+  @media (min-width: 900px) {
+    .visit__city { writing-mode: vertical-rl; transform: rotate(180deg); padding-right: 12px; }
+  }
+  .visit__info { display: grid; gap: 14px; align-content: center; }
+  .visit__address {
+    font-family: var(--f-serif);
+    font-size: clamp(22px, 2.2vw, 30px);
+    color: var(--c-deep);
+    line-height: 1.15;
+  }
+  .visit__details { display: grid; gap: 6px; font-size: 13px; color: var(--c-body); }
+  .visit__details strong { color: var(--c-deep); font-weight: 600; }
+  .visit__socials { display: flex; gap: 10px; margin-top: 12px; }
+  .visit__socials a {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--c-cream-3);
+    color: var(--c-heading);
+    display: grid; place-items: center;
+    transition: background .25s, color .25s;
+  }
+  .visit__socials a:hover { background: var(--c-deep); color: #fff; }
+
+  .visit__map {
+    border-radius: 14px;
+    background:
+      repeating-linear-gradient(45deg, rgba(92, 50, 66, .07) 0 2px, transparent 2px 16px),
+      repeating-linear-gradient(-45deg, rgba(42, 27, 34, .06) 0 2px, transparent 2px 22px),
+      var(--c-cream-3);
+    position: relative;
+    min-height: 240px;
+    overflow: hidden;
+  }
+  .visit__map svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .visit__pin {
+    position: absolute; left: 58%; top: 48%;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: var(--c-deep);
+    color: #fff;
+    display: grid; place-items: center;
+    box-shadow:
+      0 0 0 8px rgba(42, 27, 34, .14),
+      0 0 0 16px rgba(42, 27, 34, .06);
+    font-family: var(--f-serif);
+    font-style: italic;
+    font-size: 18px;
+  }
+
+  /* ===== STORY / NEWSLETTER ===== */
+  .story {
+    background: var(--c-cream);
+    padding-block: clamp(80px, 10vw, 140px);
+  }
+  .story__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(36px, 5vw, 80px);
+    align-items: center;
+  }
+  @media (min-width: 900px) { .story__inner { grid-template-columns: 1fr 1fr; } }
+  .story__title {
+    font-style: italic;
+    font-size: clamp(44px, 6vw, 80px);
+    color: var(--c-heading);
+    margin: 14px 0 26px;
+  }
+  .story__title em { color: var(--c-heading-2); }
+  .story__lede { color: var(--c-body); max-width: 44ch; margin: 0 0 22px; }
+  .story__sig {
+    margin-top: 28px;
+    display: inline-flex; align-items: center; gap: 14px;
+    color: var(--c-deep);
+  }
+  .story__sig-name {
+    font-family: var(--f-serif);
+    font-style: italic;
+    font-size: 22px;
+  }
+  .story__sig-role {
+    font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--c-body-soft);
+    margin-top: 2px;
+    display: block;
+  }
+  .story__photo {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    border-radius: 14px;
+    overflow: hidden;
+    background: center / cover no-repeat url('https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=1600&q=85');
+    box-shadow: 0 40px 90px -40px rgba(42, 27, 34, .35);
+  }
+  .story__photo::after {
+    content: ""; position: absolute; inset: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+  }
+  .story__cap {
+    position: absolute; bottom: 22px; left: 22px; right: 22px;
+    background: #fff;
+    border-radius: 100px;
+    padding: 14px 22px;
+    box-shadow: 0 20px 50px -24px rgba(42, 27, 34, .4);
+    display: inline-flex; gap: 12px; align-items: center; justify-content: center;
+    font-family: var(--f-serif);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--c-deep);
+  }
+  .story__cap span {
+    color: var(--c-heading);
+    font-family: var(--f-sans);
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    font-style: normal;
+  }
+
+  .news {
+    background: var(--c-deep);
+    color: rgba(255, 252, 246, 0.85);
+    padding-block: clamp(70px, 8vw, 110px);
+  }
+  .news__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(28px, 4vw, 60px);
+    align-items: center;
+  }
+  @media (min-width: 768px) { .news__inner { grid-template-columns: 1fr 1fr; } }
+  .news__inner h2 { color: #fff; font-style: italic; }
+  .news__inner h2 em { color: var(--c-heading-2); }
+  .news__copy { color: rgba(255, 252, 246, 0.7); max-width: 38ch; margin-top: 12px; }
+  .news__form {
+    display: flex;
+    background: rgba(255, 252, 246, 0.08);
+    border: 1px solid rgba(255, 252, 246, 0.16);
+    border-radius: 999px;
+    padding: 5px;
+    align-items: center;
+  }
+  .news__form input {
+    flex: 1;
+    background: transparent;
+    border: 0; outline: 0;
+    padding: 14px 18px;
+    color: #fff;
+    font: inherit;
+    font-size: 14px;
+  }
+  .news__form input::placeholder { color: rgba(255, 252, 246, 0.5); }
+  .news__form button {
+    background: #fff;
+    color: var(--c-deep);
+    border-radius: 999px;
+    padding: 12px 22px;
+    font-size: 13px; font-weight: 600;
+    transition: background .25s;
+  }
+  .news__form button:hover { background: rgba(255, 255, 255, 0.86); }
+  .news__fine {
+    margin-top: 14px;
     font-size: 11px;
+    color: rgba(255, 252, 246, 0.5);
+    letter-spacing: 0.04em;
+  }
+
+  /* ===== FOOTER ===== */
+  .foot {
+    background: var(--c-deep-2);
+    color: rgba(255, 252, 246, 0.7);
+    padding-block: 80px 30px;
+  }
+  .foot__top {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 36px;
+    margin-bottom: 56px;
+  }
+  @media (min-width: 768px) { .foot__top { grid-template-columns: 1.4fr repeat(3, 1fr); } }
+  .foot__brand { display: grid; gap: 8px; align-content: start; }
+  .foot__mono {
+    width: 56px; height: 56px;
+    border: 1px solid rgba(255, 252, 246, 0.35);
+    border-radius: 50%;
+    display: grid; place-items: center;
+    font-family: var(--f-serif); font-style: italic;
+    color: #fff; font-size: 26px;
+  }
+  .foot__brand-name {
+    font-family: var(--f-serif);
+    font-size: 22px;
+    letter-spacing: 0.06em;
+    color: #fff;
+    margin-top: 12px;
+  }
+  .foot__brand-sub {
+    font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--c-heading-2);
+    margin-top: 2px;
+  }
+  .foot__brand-copy {
+    margin-top: 18px; max-width: 32ch;
+    font-size: 13.5px; color: rgba(255, 252, 246, 0.65);
+    line-height: 1.65;
+  }
+  .foot__col h4 {
+    font-family: var(--f-sans);
+    font-size: 10px;
     letter-spacing: 0.32em;
     text-transform: uppercase;
-    color: var(--c-text-muted);
-    border-left: 1px solid rgba(255, 255, 255,.4);
-    padding-left: 18px;
+    color: var(--c-heading-2);
+    margin: 6px 0 18px;
+    font-weight: 600;
   }
-  .hero__since strong {
-    color: var(--c-gold);
-    font-weight: 400;
-    display: block;
-    font-size: 15px;
-    letter-spacing: 0.2em;
-    margin-top: 4px;
+  .foot__col ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+  .foot__col a {
+    font-size: 13.5px;
+    color: rgba(255, 252, 246, 0.78);
+    transition: color .2s;
   }
+  .foot__col a:hover { color: #fff; }
 
-  .hero__meta {
-    position: absolute;
-    left: 0; right: 0; bottom: 0;
-    border-top: 1px solid rgba(255, 255, 255,.18);
-    background: linear-gradient(180deg, transparent, rgba(30, 15, 56,.7));
-    padding-block: 22px;
-    font-size: 11px;
-    letter-spacing: 0.3em;
+  .foot__rule {
+    height: 1px;
+    background: rgba(255, 252, 246, 0.12);
+    border: 0;
+    margin: 0 0 24px;
+  }
+  .foot__legal {
+    display: flex; gap: 22px;
+    font-size: 10.5px;
+    letter-spacing: 0.24em;
     text-transform: uppercase;
-    color: var(--c-text-muted);
+    color: rgba(255, 252, 246, 0.5);
+    flex-wrap: wrap; justify-content: space-between;
   }
-  .hero__meta-row {
-    display: flex; justify-content: space-between; align-items: center; gap: 24px;
-    flex-wrap: wrap;
-  }
-  .hero__meta-row span { color: var(--c-cream); }
-  .hero__scroll {
-    display: inline-flex; align-items: center; gap: 12px; color: var(--c-gold);
-  }
-  .hero__scroll::after {
-    content: ""; width: 1px; height: 28px;
-    background: linear-gradient(180deg, var(--c-gold), transparent);
-    animation: scrollPulse 2.4s infinite ease-in-out;
-  }
-  @keyframes scrollPulse {
-    0%, 100% { transform: scaleY(0.4); transform-origin: top; opacity: .4; }
-    50%       { transform: scaleY(1);   transform-origin: top; opacity: 1; }
-  }
+  .foot__legal a:hover { color: #fff; }
 
-  /* ---- Sections ---- */
-  section { position: relative; }
-  .section { padding-block: clamp(80px, 10vw, 140px); }
-  .section--dark    { background: var(--c-bg); }
-  .section--cream   { background: var(--c-cream); color: var(--c-brown); }
-  .section--offwhite { background: var(--c-offwhite); color: var(--c-brown); }
-  .section--brown   { background: var(--c-brown); color: var(--c-cream); }
-
-  .section--cream h1, .section--cream h2, .section--cream h3,
-  .section--offwhite h1, .section--offwhite h2, .section--offwhite h3,
-  .about h1, .about h2, .about h3 { color: var(--c-brown); }
-
-  .about__copy h2 { color: #7B4FBF; }
-  .about__copy h2 em { color: #A776E8 !important; }
-
-  /* Scroll reveal */
+  /* Reveal */
   .reveal { opacity: 0; transform: translateY(28px); transition: opacity 1s cubic-bezier(.2,.7,.2,1), transform 1s cubic-bezier(.2,.7,.2,1); }
   .reveal.is-in { opacity: 1; transform: none; }
   .reveal[data-delay="1"] { transition-delay: .12s; }
@@ -470,1015 +994,544 @@
   .reveal[data-delay="3"] { transition-delay: .36s; }
   .reveal[data-delay="4"] { transition-delay: .48s; }
 
-  /* ---- Brand story ---- */
-  .story {
-    text-align: center;
-    background: var(--c-cream);
-    padding-block: clamp(80px, 10vw, 130px);
-    position: relative;
-    overflow: hidden;
-  }
-  .story::before, .story::after {
-    content: "";
-    position: absolute;
-    width: 220px; height: 1px;
-    background: linear-gradient(90deg, transparent, var(--c-gold), transparent);
-    top: 38px;
-  }
-  .story::before { left: -40px; }
-  .story::after  { right: -40px; }
-
-  .story__inner {
-    max-width: 880px;
-    margin-inline: auto;
-    display: grid;
-    gap: 28px;
-    justify-items: center;
-  }
-  .story__headline {
-    font-family: var(--f-serif);
-    font-weight: 500;
-    color: var(--c-brown);
-    font-size: clamp(28px, 3.6vw, 46px);
-    line-height: 1.15;
-  }
-  .story__headline em { font-style: italic; color: var(--c-accent-light); font-weight: 500; }
-  .story__copy { color: rgba(91, 58, 140, .82); max-width: 62ch; font-size: 16px; }
-  .story__stats {
-    display: flex;
-    gap: clamp(28px, 5vw, 80px);
-    margin-top: 18px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .stat { text-align: center; }
-  .stat__num { font-family: var(--f-serif); font-size: 44px; color: var(--c-accent-light); line-height: 1; }
-  .stat__label { font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--c-brown); margin-top: 8px; }
-
-  /* ---- Collections ---- */
-  .collections__head {
-    display: grid;
-    gap: 18px;
-    margin-bottom: 64px;
-    grid-template-columns: 1fr;
-  }
-  @media (min-width: 820px) {
-    .collections__head { grid-template-columns: 1fr auto; align-items: end; }
-    .collections__head p { max-width: 44ch; text-align: right; }
-  }
-  .collections__grid {
-    display: grid;
-    gap: clamp(16px, 1.6vw, 26px);
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  }
-  .ccard {
-    position: relative;
-    overflow: hidden;
-    aspect-ratio: 3 / 4;
-    background: var(--c-bg-2);
-    border: 1px solid rgba(255, 255, 255, .25);
-    isolation: isolate;
-    cursor: pointer;
-  }
-  .ccard__img {
-    position: absolute; inset: 0;
-    background-size: cover; background-position: center;
-    transform: scale(1.02);
-    transition: transform 1.2s cubic-bezier(.2,.7,.2,1), filter .8s ease;
-    filter: saturate(.95);
-  }
-  .ccard::before {
-    content: "";
-    position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(30, 15, 56,.05) 30%, rgba(30, 15, 56,.85) 100%);
-    z-index: 1;
-    transition: background .5s ease;
-  }
-  .ccard__overlay {
-    position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(255, 255, 255,0) 30%, rgba(255, 255, 255,.92) 100%);
-    z-index: 1;
-    opacity: 0;
-    transition: opacity .5s ease;
-  }
-  .ccard__body {
-    position: absolute;
-    inset: auto 0 0 0;
-    padding: 28px;
-    z-index: 2;
-    color: var(--c-cream);
-    display: grid; gap: 6px;
-  }
-  .ccard__count { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--c-gold); }
-  .ccard__title { font-family: var(--f-serif); font-size: clamp(24px, 2vw, 30px); color: var(--c-cream); line-height: 1.1; }
-  .ccard__sub { font-family: var(--f-serif); font-style: italic; color: rgba(232, 221, 245, .75); font-size: 15px; }
-  .ccard__shop {
-    margin-top: 14px;
-    opacity: 0;
-    transform: translateY(8px);
-    transition: opacity .45s ease, transform .45s ease, color .3s ease;
-    display: inline-flex; align-items: center; gap: 12px;
-    font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase;
-    color: var(--c-bg);
-  }
-  .ccard__shop::after { content: ""; width: 22px; height: 1px; background: currentColor; }
-  .ccard:hover .ccard__img { transform: scale(1.08); filter: saturate(1.05); }
-  .ccard:hover .ccard__overlay { opacity: 1; }
-  .ccard:hover .ccard__title,
-  .ccard:hover .ccard__sub,
-  .ccard:hover .ccard__count { color: var(--c-bg); }
-  .ccard:hover .ccard__shop { opacity: 1; transform: none; }
-
-  .ccard__corners i {
-    position: absolute;
-    width: 16px; height: 16px;
-    border: 1px solid var(--c-gold);
-    z-index: 3;
-    pointer-events: none;
-  }
-  .ccard__corners i:nth-child(1) { top: 12px; left: 12px; border-right: 0; border-bottom: 0; }
-  .ccard__corners i:nth-child(2) { top: 12px; right: 12px; border-left: 0; border-bottom: 0; }
-  .ccard__corners i:nth-child(3) { bottom: 12px; left: 12px; border-right: 0; border-top: 0; }
-  .ccard__corners i:nth-child(4) { bottom: 12px; right: 12px; border-left: 0; border-top: 0; }
-
-  /* ---- Signature spotlight ---- */
-  .spotlight { display: grid; grid-template-columns: 1fr; gap: 0; background: var(--c-bg); }
-  .spotlight__row { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; min-height: 620px; }
-  .spotlight__row.reverse > .spotlight__media { order: 2; }
-  .spotlight__media {
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    min-height: 420px;
-  }
-  .spotlight__media::after {
-    content: "";
-    position: absolute; inset: 28px;
-    border: 1px solid rgba(255, 255, 255,.35);
-    pointer-events: none;
-  }
-  .spotlight__copy {
-    padding: clamp(40px, 6vw, 88px);
-    display: grid;
-    align-content: center;
-    gap: 22px;
-    background: var(--c-bg);
-    position: relative;
-  }
-  .spotlight__copy .number { font-family: var(--f-serif); font-style: italic; color: var(--c-gold); font-size: 16px; }
-  .spotlight__copy h2 em { font-style: italic; color: var(--c-gold); font-weight: 500; }
-  .spotlight__copy p { max-width: 50ch; color: rgba(232, 221, 245, .82); }
-  .spotlight__ingredients {
-    list-style: none; padding: 0; margin: 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px 28px;
-    font-size: 12px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--c-text-muted);
-    border-top: 1px solid rgba(255, 255, 255, .22);
-    border-bottom: 1px solid rgba(255, 255, 255, .22);
-    padding-block: 20px;
-    margin-block: 8px;
-  }
-  .spotlight__ingredients li::before { content: "✦"; color: var(--c-gold); margin-right: 8px; font-size: 10px; }
-  .spotlight__pricerow { display: flex; align-items: center; gap: 26px; flex-wrap: wrap; margin-top: 8px; }
-  .pricetag {
-    display: inline-flex; align-items: baseline; gap: 10px;
-    border: 1px solid var(--c-gold);
-    padding: 12px 20px;
-    color: var(--c-gold);
-    font-family: var(--f-serif);
-    position: relative;
-  }
-  .pricetag .currency { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; }
-  .pricetag .amount { font-size: 24px; }
-  .pricetag .from { font-size: 9px; letter-spacing: 0.36em; text-transform: uppercase; color: var(--c-text-muted); }
-
-  @media (max-width: 820px) {
-    .spotlight__row, .spotlight__row.reverse { grid-template-columns: 1fr; }
-    .spotlight__row.reverse > .spotlight__media { order: 0; }
-  }
-
-  /* ---- About ---- */
-  .about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    background: var(--c-offwhite);
-    color: var(--c-brown);
-  }
-  .about__media {
-    min-height: 560px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-  }
-  .about__media::after { content: ""; position: absolute; inset: 30px; border: 1px solid rgba(91, 58, 140,.18); }
-  .about__copy { padding: clamp(48px, 7vw, 100px); display: grid; align-content: center; gap: 24px; }
-  .about__quote {
-    font-family: var(--f-serif);
-    font-style: italic;
-    font-size: clamp(26px, 2.6vw, 38px);
-    color: var(--c-brown);
-    line-height: 1.25;
-    border-left: 2px solid var(--c-gold);
-    padding-left: 22px;
-    max-width: 28ch;
-    margin: 0;
-  }
-  .about__sign { display: flex; align-items: center; gap: 18px; margin-top: 8px; }
-  .about__sign-name { font-family: var(--f-serif); font-size: 22px; color: var(--c-brown); }
-  .about__sign-role { font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--c-accent-light); }
-  @media (max-width: 820px) { .about { grid-template-columns: 1fr; } }
-
-  /* ---- Testimonials ---- */
-  .testimonials { padding-block: clamp(90px, 10vw, 140px); }
-  .testi__viewport { overflow: hidden; margin-top: 50px; position: relative; min-height: 360px; }
-  .testi__track { display: flex; transition: transform .8s cubic-bezier(.2,.7,.2,1); align-items: stretch; }
-  .testi {
-    flex: 0 0 100%;
-    min-width: 0;
-    text-align: center;
-    padding-inline: clamp(16px, 6vw, 80px);
-    display: grid; gap: 22px; justify-items: center;
-    align-content: center;
-    margin: 0;
-  }
-  .testi__stars { display: flex; gap: 6px; color: var(--c-gold); font-size: 16px; letter-spacing: 0.18em; }
-  .testi__quote {
-    font-family: var(--f-serif);
-    font-style: italic;
-    font-size: clamp(22px, 2.3vw, 34px);
-    line-height: 1.35;
-    color: var(--c-cream);
-    max-width: 30ch;
-    margin: 0;
-  }
-  .testi__name { font-size: 11px; letter-spacing: 0.36em; text-transform: uppercase; color: var(--c-gold); }
-  .testi__meta { font-size: 12px; color: var(--c-text-muted); font-style: italic; font-family: var(--f-serif); }
-  .testi__nav { display: flex; align-items: center; gap: 28px; justify-content: center; margin-top: 48px; }
-  .testi__btn {
-    width: 46px; height: 46px;
-    border: 1px solid rgba(255, 255, 255, .55);
-    background: transparent;
-    color: var(--c-gold);
-    display: grid; place-items: center;
-    transition: background .3s, color .3s, border-color .3s;
-  }
-  .testi__btn:hover { background: var(--c-gold); color: var(--c-bg); }
-  .testi__dots { display: flex; gap: 10px; }
-  .testi__dot {
-    width: 22px; height: 1px; background: rgba(255, 255, 255,.3); border: 0;
-    transition: background .3s, transform .3s;
-    padding: 0;
-  }
-  .testi__dot.is-active { background: var(--c-gold); transform: scaleX(1.4); transform-origin: left; }
-
-  /* ---- Custom CTA ---- */
-  .custom {
-    background: var(--c-brown);
-    color: var(--c-cream);
-    text-align: center;
-    padding-block: clamp(90px, 10vw, 140px);
-    position: relative;
-    overflow: hidden;
-  }
-  .custom::before, .custom::after {
-    content: "";
-    position: absolute;
-    width: 360px; height: 360px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 255, 255,.22), transparent 70%);
-    pointer-events: none;
-  }
-  .custom::before { left: -120px; top: -120px; }
-  .custom::after  { right: -140px; bottom: -160px; }
-  .custom__inner {
-    max-width: 760px;
-    margin-inline: auto;
-    display: grid;
-    gap: 30px;
-    justify-items: center;
-    position: relative; z-index: 1;
-  }
-  .custom h2 { color: var(--c-cream); }
-  .custom h2 em { font-style: italic; color: var(--c-gold); font-weight: 500; }
-  .custom p { color: rgba(232, 221, 245, .82); max-width: 56ch; }
-  .custom__details {
-    display: flex; gap: clamp(20px, 4vw, 60px);
-    margin-top: 12px; flex-wrap: wrap; justify-content: center;
-    font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase;
-    color: rgba(232, 221, 245,.7);
-  }
-  .custom__details strong {
-    display: block;
-    font-family: var(--f-serif);
-    font-style: italic;
-    font-size: 18px;
-    color: var(--c-gold);
-    letter-spacing: 0.02em;
-    text-transform: none;
-    margin-bottom: 4px;
-    font-weight: 500;
-  }
-
-  /* ---- Gallery ---- */
-  .gallery { background: var(--c-bg); padding-block: clamp(80px, 9vw, 120px); overflow: hidden; }
-  .gallery__head {
-    display: flex; align-items: end; justify-content: space-between;
-    gap: 20px; flex-wrap: wrap;
-    margin-bottom: 40px;
-  }
-  .gallery__handle { font-family: var(--f-serif); font-style: italic; color: var(--c-gold); font-size: 18px; }
-  .gallery__scroll {
-    display: flex;
-    gap: 18px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding-bottom: 16px;
-    scrollbar-width: thin;
-    scrollbar-color: var(--c-brown) transparent;
-  }
-  .gallery__scroll::-webkit-scrollbar { height: 6px; }
-  .gallery__scroll::-webkit-scrollbar-thumb { background: var(--c-brown); border-radius: 3px; }
-  .gallery__tile {
-    flex: 0 0 clamp(220px, 24vw, 320px);
-    aspect-ratio: 4 / 5;
-    background-size: cover; background-position: center;
-    scroll-snap-align: start;
-    position: relative;
-    cursor: pointer;
-    transition: transform .5s ease;
-    outline: 1px solid transparent;
-    outline-offset: -1px;
-  }
-  .gallery__tile::after {
-    content: ""; position: absolute; inset: 0;
-    background: linear-gradient(180deg, transparent 50%, rgba(30, 15, 56,.7));
-    opacity: 0; transition: opacity .4s;
-  }
-  .gallery__tile span {
-    position: absolute; left: 18px; bottom: 16px;
-    color: var(--c-cream);
-    font-family: var(--f-serif); font-style: italic;
-    z-index: 1;
-    opacity: 0; transform: translateY(6px);
-    transition: opacity .4s, transform .4s;
-  }
-  .gallery__tile:hover { transform: translateY(-4px); outline-color: var(--c-gold); }
-  .gallery__tile:hover::after { opacity: 1; }
-  .gallery__tile:hover span { opacity: 1; transform: none; }
-
-  /* ---- Footer ---- */
-  footer.foot {
-    background: var(--c-bg-2);
-    padding-block: 90px 40px;
-    border-top: 1px solid rgba(255, 255, 255,.2);
-  }
-  .foot__top {
-    display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr 1fr;
-    gap: clamp(28px, 4vw, 60px);
-    padding-bottom: 60px;
-    border-bottom: 1px solid rgba(255, 255, 255,.15);
-  }
-  @media (max-width: 820px) {
-    .foot__top { grid-template-columns: 1fr 1fr; }
-    .foot__col--brand { grid-column: 1 / -1; }
-  }
-  .foot__brand-mark { font-family: var(--f-serif); font-style: italic; color: var(--c-gold); font-size: 56px; line-height: 1; }
-  .foot__brand-name { font-family: var(--f-serif); font-size: 24px; letter-spacing: 0.36em; text-transform: uppercase; color: var(--c-cream); margin-top: 6px; }
-  .foot__tag { font-family: var(--f-serif); font-style: italic; color: var(--c-gold); margin-top: 14px; font-size: 18px; }
-  .foot__col h4 {
-    font-family: var(--f-sans);
-    font-weight: 400;
-    font-size: 11px;
-    letter-spacing: 0.32em;
-    text-transform: uppercase;
-    color: var(--c-gold);
-    margin: 0 0 22px;
-  }
-  .foot__col ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
-  .foot__col a { font-size: 14px; color: rgba(232, 221, 245, .78); transition: color .3s; }
-  .foot__col a:hover { color: var(--c-gold); }
-  .foot__social { display: flex; gap: 12px; margin-top: 22px; }
-  .foot__social a {
-    width: 42px; height: 42px;
-    border: 1px solid rgba(255, 255, 255,.4);
-    display: grid; place-items: center;
-    color: var(--c-gold);
-    transition: background .3s, color .3s;
-  }
-  .foot__social a:hover { background: var(--c-gold); color: var(--c-bg); }
-  .foot__bottom {
-    display: flex; justify-content: space-between; align-items: center;
-    padding-top: 30px;
-    font-size: 12px;
-    color: var(--c-text-muted);
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    flex-wrap: wrap; gap: 14px;
-  }
-
-  /* ---- Responsive ---- */
-  @media (max-width: 1080px) {
-    .nav__links { display: none; }
-    .hamburger { display: block; }
-    .brand__pre, .brand__post { font-size: 8px; letter-spacing: 0.38em; }
-    .brand__name { font-size: clamp(22px, 6vw, 28px); }
-    .topbar { font-size: 9px; letter-spacing: 0.22em; padding: 7px 0; }
-    .topbar__row { gap: 12px; }
-    .topbar__row > span:nth-child(1),
-    .topbar__row > span:nth-child(2),
-    .topbar__row > span:nth-child(4) { display: none; }
-  }
-  @media (max-width: 880px) {
-    .hero__inner { padding-block: 140px 110px; }
-    .hero__meta-row { justify-content: center; text-align: center; }
-    .spotlight__media { aspect-ratio: 5 / 4; min-height: 0; }
-  }
-  @media (max-width: 520px) {
-    .spotlight__ingredients { grid-template-columns: 1fr; }
-    .hero__since { padding-left: 0; border-left: 0; }
+  @media (max-width: 899px) {
+    .ing { display: none; }
+    .signature__stage { min-height: 0; }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    * { animation: none !important; transition: none !important; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
   }
 </style>
 </head>
 <body>
 
-<!-- TOPBAR -->
-<div class="topbar" id="topbar">
-  <div class="container topbar__row">
-    <span>Complimentary citywide delivery on orders over $80</span>
-    <span class="topbar__sep" aria-hidden="true">✦</span>
-    <span>Mar Mikhaël &middot; Beirut</span>
-    <span class="topbar__sep" aria-hidden="true">✦</span>
-    <span>Bespoke commissions <a href="#custom">+961 1 200 819</a></span>
-  </div>
-</div>
+<!-- ===== NAV ===== -->
+<header class="nav" id="nav" data-screen-label="Site nav">
+  <a href="#top" class="brand" aria-label="Chebel Patisserie, home">
+    <span class="brand__mono" aria-hidden="true">C</span>
+    <span class="brand__name">Chebel<sup class="brand__tm">®</sup></span>
+  </a>
 
-<!-- NAV -->
-<header class="nav" id="nav">
-  <div class="container nav__row">
+  <nav class="nav__pill" aria-label="Primary">
+    <a href="#carte" class="is-active">La Carte</a>
+    <a href="#signature">Signatures</a>
+    <a href="#process">The Process</a>
+    <a href="#visit">Visit</a>
+    <a href="#story">Our Story</a>
+    <a href="#carte" class="btn btn--solid" style="margin-left: 8px;">Order a Cake</a>
+  </nav>
 
-    <nav class="nav__links nav__links--left" aria-label="Primary, left">
-      <a href="#collections">Collections</a>
-      <a href="#signature">Signatures</a>
-      <a href="#about">Our Craft</a>
-    </nav>
-
-    <a href="#top" class="brand" aria-label="Chebel Patisserie, home">
-      <span class="brand__rule" aria-hidden="true"></span>
-      <span class="brand__pre">Maison de Pâtisserie</span>
-      <span class="brand__name">Chebel</span>
-      <span class="brand__post">Est. MMXIX &middot; Beirut</span>
+  <div class="nav__tools">
+    <a href="#join" class="nav__tool">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+      <span>Join the List</span>
     </a>
-
-    <nav class="nav__links nav__links--right" aria-label="Primary, right">
-      <a href="#custom">Custom Cakes</a>
-      <a href="#gallery">Journal</a>
-      <a href="#custom" class="nav__order">Order <span aria-hidden="true">↗</span></a>
-    </nav>
-
-    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-      <span></span><span></span><span></span>
+    <a href="#login" class="nav__tool">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+      <span>Sign In</span>
+    </a>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <svg class="ic-menu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="ic-x" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
     </button>
   </div>
 </header>
 
-<aside class="mobile-menu" id="mobile-menu" aria-hidden="true">
-  <a href="#collections">Collections</a>
+<div class="drawer-overlay" id="drawer-overlay"></div>
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <a href="#carte">La Carte</a>
   <a href="#signature">Signatures</a>
-  <a href="#about">Our Craft</a>
-  <a href="#custom">Custom Cakes</a>
-  <a href="#gallery">Gallery</a>
+  <a href="#process">The Process</a>
+  <a href="#visit">Visit</a>
+  <a href="#story">Our Story</a>
+  <a href="#carte" class="btn btn--solid" style="margin-top: 12px; align-self: flex-start;">Order a Cake</a>
 </aside>
 
-<!-- HERO -->
 <main id="top">
-<section class="hero" aria-label="Introduction">
-  <div class="hero__img" role="img" aria-label="Layered chocolate celebration cake"></div>
 
-  <div class="container hero__inner">
-    <span class="hero__eyebrow eyebrow reveal">Est. 2019 &nbsp;·&nbsp; House of Patisserie</span>
+<!-- ===== HERO ===== -->
+<section class="hero" data-screen-label="01 Hero">
+  <div class="hero__bg" aria-hidden="true">
+    <video src="uploads/mp_.mp4" autoplay muted loop playsinline preload="auto"></video>
+  </div>
 
-    <h1 class="reveal" data-delay="1">
-      Handcrafted for<br />
-      Life's <em>Sweetest</em> Moments.
+  <div class="hero__copy reveal">
+    <span class="eyebrow">— Maison de Pâtisserie · Beirut · Est. MMXIX —</span>
+    <h1 class="hero__title">
+      A celebration <em>composed by hand,<br />bite by bite.</em>
     </h1>
-
-    <p class="hero__sub reveal" data-delay="2">
-      Seven years of celebration cakes, brownies, and nostalgic desserts —
-      composed with the finest couverture chocolate and natural ingredients.
-      No substitutes. No compromise.
+    <p class="hero__lede">
+      Small-batch celebration cakes, brownies and nostalgic desserts —
+      finished the morning of pick-up.
     </p>
+  </div>
 
-    <div class="hero__cta-row reveal" data-delay="3">
-      <a href="#collections" class="btn">
-        Explore Our Collections
-        <span class="arrow" aria-hidden="true"></span>
-      </a>
-      <div class="hero__since">
-        Crafted in small batches
-        <strong>Since MMXIX</strong>
-      </div>
+  <div class="hero__bl reveal" data-delay="2">
+    <div class="hero__bl-head">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.6 4.4L18 9l-4.4 1.6L12 15l-1.6-4.4L6 9l4.4-1.6L12 3z"/><path d="M19 14l.8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8L19 14z"/></svg>
+      <span>Atelier Signature<sup style="font-size:9px;opacity:.7;">®</sup></span>
+    </div>
+    <p class="hero__bl-copy">
+      Madagascan vanilla. Sicilian pistachio. 70% single-origin couverture.
+      Sourced rather than substituted — weighed to the gram.
+    </p>
+    <div class="hero__bl-row">
+      <a href="#signature" class="btn btn--cream">Reserve a Signature</a>
+      <a href="#carte" class="hero__bl-link">Read the Carte.</a>
     </div>
   </div>
 
-  <div class="hero__meta">
-    <div class="container hero__meta-row">
-      <div>Couverture · 70% Single Origin</div>
-      <div><span>Featured</span> &nbsp;·&nbsp; Maison Velour Rouge</div>
-      <div class="hero__scroll">Scroll</div>
-    </div>
+  <div class="hero__br">
+    <button class="hero__br-play" aria-label="Play film">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 21 12 6 21 6 3"/></svg>
+    </button>
+    <span>A morning at the Atelier</span>
+    <span class="hero__br-time">1:42</span>
   </div>
 </section>
 
-<!-- BRAND STORY -->
-<section class="story on-cream" aria-label="Brand philosophy">
-  <div class="container story__inner">
-    <span class="eyebrow on-cream reveal">— Our Promise —</span>
+<!-- ===== MARQUEE ===== -->
+<section class="marquee" aria-label="Values">
+  <div class="marquee__track" aria-hidden="true">
+    <span class="marquee__item">Madagascan Vanilla</span>
+    <span class="marquee__dot"></span>
+    <span class="marquee__item">Sicilian Pistachio</span>
+    <span class="marquee__dot"></span>
+    <span class="marquee__item">70% Couverture</span>
+    <span class="marquee__dot"></span>
+    <span class="marquee__item">Bulgarian Rose</span>
+    <span class="marquee__dot"></span>
+    <span class="marquee__item">Composed by Hand</span>
+    <span class="marquee__dot"></span>
+    <span class="marquee__item">Beirut · Est. MMXIX</span>
+    <span class="marquee__dot"></span>
+    <!-- duplicate for seamless loop -->
+    <span class="marquee__item">Madagascan Vanilla</span>
+    <span class="marquee__dot"></span>
+    <span class="marquee__item">Sicilian Pistachio</span>
+    <span class="marquee__dot"></span>
+    <span class="marquee__item">70% Couverture</span>
+    <span class="marquee__dot"></span>
+    <span class="marquee__item">Bulgarian Rose</span>
+    <span class="marquee__dot"></span>
+    <span class="marquee__item">Composed by Hand</span>
+    <span class="marquee__dot"></span>
+    <span class="marquee__item">Beirut · Est. MMXIX</span>
+    <span class="marquee__dot"></span>
+  </div>
+</section>
 
-    <h2 class="story__headline reveal" data-delay="1">
-      Seven years. Finest ingredients. <em>Masterful craft.</em>
-    </h2>
-
-    <hr class="divider center reveal" data-delay="2" />
-
-    <p class="story__copy reveal" data-delay="2">
+<!-- ===== PROMISE ===== -->
+<section class="promise" aria-label="Our promise">
+  <div class="promise__inner">
+    <span class="eyebrow reveal">— No substitutes, no compromise —</span>
+    <p class="promise__line reveal" data-delay="1">
+      Seven years of <em>handcrafted</em> celebration cakes,
+      composed in small batches with the finest couverture and natural ingredients.
+    </p>
+    <hr class="promise__rule reveal" data-delay="2" />
+    <p class="promise__copy reveal" data-delay="2">
       Chebel began as a quiet pursuit of the perfect bite — a way of returning
       to the flavours of childhood through the discipline of European patisserie.
-      Today, each cake is still composed by hand, in small batches, by chefs who
-      believe a dessert should be felt as much as it is tasted.
+      Each dessert is still composed by hand, by chefs who believe a celebration
+      should be felt as much as it is tasted.
     </p>
-
-    <div class="story__stats reveal" data-delay="3">
-      <div class="stat"><div class="stat__num">07</div><div class="stat__label">Years of Heritage</div></div>
-      <div class="stat"><div class="stat__num">42</div><div class="stat__label">Signature Recipes</div></div>
-      <div class="stat"><div class="stat__num">9.8</div><div class="stat__label">Guest Rating</div></div>
-      <div class="stat"><div class="stat__num">100%</div><div class="stat__label">Natural Ingredients</div></div>
-    </div>
   </div>
 </section>
 
-<!-- COLLECTIONS -->
-<section class="section section--dark" id="collections" aria-label="Featured collections">
+<!-- ===== CARTE ===== -->
+<section class="carte" id="carte" aria-label="La Carte">
   <div class="container">
-    <div class="collections__head">
-      <div class="reveal">
-        <span class="eyebrow">— The Collections —</span>
-        <h2 style="margin-top:18px;">A library of <em style="font-style:italic;color:var(--c-gold);font-weight:500;">handcrafted</em><br />indulgence.</h2>
+    <div class="carte__inner">
+      <span class="carte__giant reveal" aria-hidden="true">Carte</span>
+
+      <div class="carte__photos reveal" data-delay="1">
+        <div class="carte__photo--lead" style="background-image:url('https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=900&q=85');"></div>
+        <div style="background-image:url('https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=600&q=80');"></div>
+        <div style="background-image:url('https://images.unsplash.com/photo-1542124948-dc391252a940?auto=format&fit=crop&w=600&q=80');"></div>
       </div>
-      <p class="reveal" data-delay="1" style="color:rgba(232,221,245,.78);">
-        Four chapters of the Chebel kitchen — from celebration showpieces to the
-        small, quiet pleasures of everyday indulgence.
-      </p>
-    </div>
 
-    <div class="collections__grid">
-      <article class="ccard reveal" data-delay="1" tabindex="0">
-        <div class="ccard__img" style="background-image:url('https://images.unsplash.com/photo-1623428187969-5da2dcea5ebf?auto=format&fit=crop&w=1200&q=80');"></div>
-        <div class="ccard__corners" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-        <div class="ccard__overlay"></div>
-        <div class="ccard__body">
-          <span class="ccard__count">Nº 01 · 12 Designs</span>
-          <h3 class="ccard__title">Birthday Cakes</h3>
-          <p class="ccard__sub">Layered with memory.</p>
-          <span class="ccard__shop">Shop Now</span>
-        </div>
-      </article>
+      <div class="carte__list reveal" data-delay="2">
+        <span class="eyebrow">— The Carte —</span>
+        <h2>Pastries &amp; Cakes</h2>
 
-      <article class="ccard reveal" data-delay="2" tabindex="0">
-        <div class="ccard__img" style="background-image:url('https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=1200&q=80');"></div>
-        <div class="ccard__corners" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-        <div class="ccard__overlay"></div>
-        <div class="ccard__body">
-          <span class="ccard__count">Nº 02 · 8 Variants</span>
-          <h3 class="ccard__title">Brownies</h3>
-          <p class="ccard__sub">Molten, dense, unforgettable.</p>
-          <span class="ccard__shop">Shop Now</span>
+        <div class="carte__tabs" role="tablist">
+          <button class="carte__tab is-active" role="tab" aria-selected="true">Pastries</button>
+          <button class="carte__tab" role="tab">Whole Cakes</button>
+          <button class="carte__tab" role="tab">Viennoiserie</button>
+          <button class="carte__tab" role="tab">Drinks</button>
         </div>
-      </article>
 
-      <article class="ccard reveal" data-delay="3" tabindex="0">
-        <div class="ccard__img" style="background-image:url('https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=1200&q=80');"></div>
-        <div class="ccard__corners" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-        <div class="ccard__overlay"></div>
-        <div class="ccard__body">
-          <span class="ccard__count">Nº 03 · Bespoke</span>
-          <h3 class="ccard__title">Celebration Cakes</h3>
-          <p class="ccard__sub">For the rituals that matter.</p>
-          <span class="ccard__shop">Shop Now</span>
-        </div>
-      </article>
+        <ul class="carte__items">
+          <li class="carte__item">
+            <div>
+              <div class="carte__item-name">Honey Fig Cake</div>
+              <div class="carte__item-desc">Wildflower honey, fig crisp, mascarpone &amp; almond génoise.</div>
+            </div>
+            <div class="carte__item-price">$14</div>
+          </li>
+          <li class="carte__item">
+            <div>
+              <div class="carte__item-name">Velour Rouge</div>
+              <div class="carte__item-desc">Six-layer red velvet with vanilla mascarpone &amp; beetroot cocoa.</div>
+            </div>
+            <div class="carte__item-price">$16</div>
+          </li>
+          <li class="carte__item">
+            <div>
+              <div class="carte__item-name">Pistachio &amp; Rose</div>
+              <div class="carte__item-desc">Sicilian pistachio crémeux, Bulgarian rose petal, crème légère.</div>
+            </div>
+            <div class="carte__item-price">$18</div>
+          </li>
+          <li class="carte__item">
+            <div>
+              <div class="carte__item-name">Midnight Brownie</div>
+              <div class="carte__item-desc">70% single-origin couverture, brown butter, Maldon sea salt.</div>
+            </div>
+            <div class="carte__item-price">$9</div>
+          </li>
+          <li class="carte__item">
+            <div>
+              <div class="carte__item-name">Citrus Tartelette</div>
+              <div class="carte__item-desc">Sicilian lemon curd, sablé breton, torched Italian meringue.</div>
+            </div>
+            <div class="carte__item-price">$12</div>
+          </li>
+          <li class="carte__item">
+            <div>
+              <div class="carte__item-name">Coffee Tiramisu</div>
+              <div class="carte__item-desc">Bourbon espresso, single-origin Madagascan vanilla mascarpone.</div>
+            </div>
+            <div class="carte__item-price">$13</div>
+          </li>
+        </ul>
 
-      <article class="ccard reveal" data-delay="4" tabindex="0">
-        <div class="ccard__img" style="background-image:url('https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=1200&q=80');"></div>
-        <div class="ccard__corners" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-        <div class="ccard__overlay"></div>
-        <div class="ccard__body">
-          <span class="ccard__count">Nº 04 · Limited</span>
-          <h3 class="ccard__title">Seasonal Specials</h3>
-          <p class="ccard__sub">Fleeting, by design.</p>
-          <span class="ccard__shop">Shop Now</span>
+        <div class="carte__cta">
+          <a href="#carte" class="btn btn--solid">View Full Menu →</a>
+          <a href="#signature" class="btn btn--outline">Reserve a Cake</a>
         </div>
-      </article>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- SIGNATURE SPOTLIGHT -->
-<section class="spotlight" id="signature" aria-label="Signature products">
+<!-- ===== SIGNATURE ===== -->
+<section class="signature" id="signature" aria-label="Atelier Signature">
+  <div class="container">
+    <div class="signature__head reveal">
+      <span class="eyebrow">— Limited Edition · Spring Reserve —</span>
+      <h2>Atelier <em>Signature</em></h2>
+      <div class="sub">Pistachio &amp; Rose</div>
+    </div>
 
-  <div class="spotlight__row">
-    <div class="spotlight__media reveal"
-         style="background-image:url('https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=1600&q=80');"
-         role="img" aria-label="Red velvet cake with cream cheese frosting"></div>
-    <div class="spotlight__copy reveal" data-delay="1">
-      <span class="number">— Signature Nº I —</span>
-      <h2>Maison Velour <em>Rouge.</em></h2>
-      <p>
-        Our reimagining of the classic red velvet — a six-layer composition
-        of cocoa-rich crumb, mascarpone clouds, and a hush of vanilla bean.
-        Restrained on the eye, rapturous on the palate.
+    <div class="signature__stage reveal" data-delay="1">
+      <div class="signature__product" role="img" aria-label="Pistachio and rose Atelier cake"></div>
+
+      <div class="ing ing--l1">
+        <div class="ing__avatar" style="background-image:url('https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&w=200&q=80');"></div>
+        <div class="ing__line"><span class="ing__label">Sicilian Pistachio</span></div>
+      </div>
+      <div class="ing ing--l2">
+        <div class="ing__avatar" style="background-image:url('https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=200&q=80');" data-comment-anchor="e9ba51298d-div"></div>
+        <div class="ing__line"><span class="ing__label">Rose Petal Jelly</span></div>
+      </div>
+      <div class="ing ing--l3">
+        <div class="ing__avatar" style="background-image:url('https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=200&q=80');"></div>
+        <div class="ing__line"><span class="ing__label">Almond Génoise</span></div>
+      </div>
+      <div class="ing ing--r1">
+        <div class="ing__avatar" style="background-image:url('https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=200&q=80');"></div>
+        <div class="ing__line"><span class="ing__label">Madagascan Vanilla</span></div>
+      </div>
+      <div class="ing ing--r2">
+        <div class="ing__avatar" style="background-image:url('https://images.unsplash.com/photo-1623428187969-5da2dcea5ebf?auto=format&fit=crop&w=200&q=80');"></div>
+        <div class="ing__line"><span class="ing__label">Heritage Honey</span></div>
+      </div>
+      <div class="ing ing--r3">
+        <div class="ing__avatar" style="background-image:url('https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=200&q=80');"></div>
+        <div class="ing__line"><span class="ing__label">Crème Légère</span></div>
+      </div>
+    </div>
+
+    <h3 class="signature__name reveal" data-delay="2">Pistachio &amp; Rose</h3>
+
+    <div class="signature__row reveal" data-delay="2">
+      <p class="signature__copy">
+        Composed of Sicilian pistachio crémeux, rose-petal jelly, and the lightest
+        almond génoise. Served at engagements, anniversaries, and the most discreet
+        of dinners.
       </p>
-      <ul class="spotlight__ingredients">
-        <li>Madagascan Vanilla</li>
-        <li>European Butter</li>
-        <li>Mascarpone Cream</li>
-        <li>Beetroot Cocoa Crumb</li>
-      </ul>
-      <div class="spotlight__pricerow">
-        <div class="pricetag">
-          <span class="from">From</span>
-          <span class="currency">USD</span>
-          <span class="amount">82</span>
-        </div>
-        <a href="#custom" class="btn" style="padding:14px 24px;">
-          Order This Cake <span class="arrow"></span>
-        </a>
+      <div class="signature__price">
+        <span class="from">From</span>
+        <span class="amount">$128</span>
+        <a href="#" class="btn btn--solid">Reserve Now →</a>
+      </div>
+      <div class="signature__notes">
+        <p><strong style="color:var(--c-deep);font-weight:600;">72-hour notice.</strong> Each Atelier cake is composed to order and finished by hand the morning of pick-up.</p>
+        <p class="availability">Available March – June only.</p>
       </div>
     </div>
   </div>
-
-  <div class="spotlight__row reverse">
-    <div class="spotlight__media reveal"
-         style="background-image:url('https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=1600&q=80');"
-         role="img" aria-label="Gooey chocolate brownie"></div>
-    <div class="spotlight__copy reveal" data-delay="1">
-      <span class="number">— Signature Nº II —</span>
-      <h2>The <em>Midnight</em> Brownie.</h2>
-      <p>
-        Slow-baked with 70% single-origin couverture and a centre that stays
-        molten long after it leaves the oven. A small, dense, devotional bite —
-        the dessert our regulars cannot leave without.
-      </p>
-      <ul class="spotlight__ingredients">
-        <li>70% Couverture</li>
-        <li>Maldon Sea Salt</li>
-        <li>Brown Butter</li>
-        <li>Heritage Cocoa Nibs</li>
-      </ul>
-      <div class="spotlight__pricerow">
-        <div class="pricetag">
-          <span class="from">Box of Nine</span>
-          <span class="currency">USD</span>
-          <span class="amount">36</span>
-        </div>
-        <a href="#custom" class="btn" style="padding:14px 24px;">
-          Add to Order <span class="arrow"></span>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div class="spotlight__row">
-    <div class="spotlight__media reveal"
-         style="background-image:url('https://images.unsplash.com/photo-1612203985729-70726954388c?auto=format&fit=crop&w=1600&q=80');"
-         role="img" aria-label="Pistachio rose celebration cake"></div>
-    <div class="spotlight__copy reveal" data-delay="1">
-      <span class="number">— Signature Nº III —</span>
-      <h2>Pistachio &amp; <em>Rose Atelier.</em></h2>
-      <p>
-        A celebration cake composed of Sicilian pistachio crémeux,
-        rose-petal jelly, and the lightest almond génoise. Served at
-        engagements, anniversaries, and the most discreet of dinners.
-      </p>
-      <ul class="spotlight__ingredients">
-        <li>Sicilian Pistachio</li>
-        <li>Bulgarian Rose</li>
-        <li>Almond Génoise</li>
-        <li>Crème Légère</li>
-      </ul>
-      <div class="spotlight__pricerow">
-        <div class="pricetag">
-          <span class="from">From</span>
-          <span class="currency">USD</span>
-          <span class="amount">128</span>
-        </div>
-        <a href="#custom" class="btn" style="padding:14px 24px;">
-          Enquire <span class="arrow"></span>
-        </a>
-      </div>
-    </div>
-  </div>
-
 </section>
 
-<!-- ABOUT / PHILOSOPHY -->
-<section class="about" id="about" aria-label="Our philosophy">
-  <div class="about__media reveal"
-       style="background-image:url('https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=1600&q=80');"
-       role="img" aria-label="Pastry chef glazing a cake in the kitchen"></div>
+<!-- ===== PROCESS ===== -->
+<section class="process" id="process" aria-label="The Process">
+  <div class="container">
+    <div class="process__head reveal">
+      <span class="eyebrow on-dark">— The Process —</span>
+      <h2>From the carte to the table, in <em>three quiet steps.</em></h2>
+    </div>
 
-  <div class="about__copy reveal" data-delay="1">
-    <span class="eyebrow on-cream">— Our Philosophy —</span>
-    <h2>A dessert is a <em style="font-style:italic;color:var(--c-accent-light);font-weight:500;">small piece</em> of memory.</h2>
+    <div class="process__grid">
+      <div class="process__step reveal" data-delay="1">
+        <span class="process__num">i.</span>
+        <h3>Reserve</h3>
+        <p>Choose from the carte, or compose a signature with the kitchen. Reservations open seventy-two hours ahead — same-day for select pastries.</p>
+      </div>
+      <div class="process__step reveal" data-delay="2">
+        <span class="process__num">ii.</span>
+        <h3>Composed by Hand</h3>
+        <p>The kitchen weighs, layers, and glazes each cake the morning of pick-up. Nothing is held overnight; nothing is shipped frozen.</p>
+      </div>
+      <div class="process__step reveal" data-delay="3">
+        <span class="process__num">iii.</span>
+        <h3>Collected, or Delivered</h3>
+        <p>Walk into the Atelier on Rue des Cèdres, or have it delivered citywide — wrapped in our signature ribbon, kept at temperature.</p>
+      </div>
+    </div>
 
-    <blockquote class="about__quote">
-      "Our desserts evoke cherished taste memory — the first cake at a
-      grandmother's table, a midnight slice shared in confidence."
-    </blockquote>
+    <div class="process__cta reveal" data-delay="4">
+      <a href="#carte" class="btn btn--cream">Begin a Reservation →</a>
+    </div>
+  </div>
+</section>
 
-    <p style="color:rgba(91,58,140,.82);max-width:54ch;">
-      Every recipe at Chebel begins with a question: what does this remind us of?
-      From there we work backwards — sourcing single-origin couverture, hand-churning
-      our butter creams, weighing flours to the gram. Our masterful chefs treat each
-      celebration as if it were their own.
-    </p>
-
-    <div class="about__sign">
+<!-- ===== GALLERY STRIP ===== -->
+<section class="strip" aria-label="Atelier moments">
+  <div class="container">
+    <div class="strip__head reveal">
       <div>
-        <div class="about__sign-name">Yara Chebel</div>
-        <div class="about__sign-role">Founder &amp; Chef Pâtissier</div>
+        <span class="eyebrow">— The Atelier —</span>
+        <h2 style="margin-top: 10px;">Moments from <em>the kitchen.</em></h2>
       </div>
+      <a href="#">Follow on Instagram</a>
+    </div>
+    <div class="strip__row">
+      <div class="strip__tile reveal" style="background-image:url('https://images.unsplash.com/photo-1602351447937-745cb720612f?auto=format&fit=crop&w=900&q=80');"><span>Plated, by candlelight.</span></div>
+      <div class="strip__tile reveal" data-delay="1" style="background-image:url('https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=900&q=80');"><span>Macarons, just rested.</span></div>
+      <div class="strip__tile reveal" data-delay="2" style="background-image:url('https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=80');" data-comment-anchor="4d94292fc7-div"><span>Saturday windows.</span></div>
+      <div class="strip__tile reveal" data-delay="3" style="background-image:url('https://images.unsplash.com/photo-1607478900766-efe13248b125?auto=format&fit=crop&w=900&q=80');"><span>Ganache, poured.</span></div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="section section--dark testimonials" aria-label="Customer testimonials">
+<!-- ===== VISIT ===== -->
+<section class="visit" id="visit" aria-label="Visit the Atelier">
   <div class="container">
-    <div style="text-align:center;display:grid;gap:12px;justify-items:center;" class="reveal">
-      <span class="eyebrow">— Kind Words —</span>
-      <h2>Told by those who <em style="font-style:italic;color:var(--c-gold);font-weight:500;">taste</em> first.</h2>
+    <div class="visit__card reveal">
+      <div class="visit__city" aria-hidden="true">Beirut</div>
+
+      <div class="visit__info">
+        <span class="eyebrow">— Maison &amp; Atelier —</span>
+        <div class="visit__address">42 Rue des Cèdres,<br />Mar Mikhaël</div>
+        <div class="visit__details">
+          <div><strong>Tue – Sun</strong> &nbsp; 10:00 – 20:00</div>
+          <div><strong>Tel</strong> &nbsp; +961 1 200 819</div>
+          <div><strong>Email</strong> &nbsp; bonjour@chebel.co</div>
+        </div>
+        <div class="visit__socials">
+          <a href="#" aria-label="Instagram">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
+          </a>
+          <a href="#" aria-label="WhatsApp">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12a9 9 0 1 1-3.5-7.1L21 4l-1 3.4A9 9 0 0 1 21 12z"/></svg>
+          </a>
+          <a href="#" aria-label="Pinterest">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7c2.5 0 4 1.5 4 3.8 0 2.4-1.6 4.2-3.6 4.2"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="visit__map" aria-label="Stylized map">
+        <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice">
+          <g stroke="rgba(92,50,66,.28)" fill="none" stroke-width="1">
+            <path d="M0 70 Q 100 30 200 80 T 400 60"/>
+            <path d="M0 130 Q 120 90 240 140 T 400 130"/>
+            <path d="M0 190 Q 80 160 200 200 T 400 200"/>
+            <path d="M120 0 L 160 260"/>
+            <path d="M240 0 L 200 260"/>
+            <path d="M320 0 L 340 260"/>
+          </g>
+          <g fill="rgba(92,50,66,.16)">
+            <rect x="20" y="40" width="40" height="28" rx="3"/>
+            <rect x="280" y="170" width="50" height="34" rx="3"/>
+            <rect x="80" y="200" width="40" height="30" rx="3"/>
+          </g>
+        </svg>
+        <div class="visit__pin" aria-hidden="true">C</div>
+      </div>
     </div>
+  </div>
+</section>
 
-    <div class="testi__viewport reveal" data-delay="1">
-      <div class="testi__track" id="testi-track">
-
-        <figure class="testi">
-          <div class="testi__stars" aria-label="Five out of five stars">★ ★ ★ ★ ★</div>
-          <blockquote class="testi__quote">
-            "The Velour Rouge arrived like a small piece of theatre.
-            My mother cried before she cut it. Chebel understands the
-            weight of a celebration."
-          </blockquote>
-          <figcaption class="testi__name">Leïla Haddad</figcaption>
-          <div class="testi__meta">Anniversary, Beirut · April</div>
-        </figure>
-
-        <figure class="testi">
-          <div class="testi__stars" aria-label="Five out of five stars">★ ★ ★ ★ ★</div>
-          <blockquote class="testi__quote">
-            "I have ordered brownies from every patisserie in this city.
-            The Midnight is the only one that has ever made me close my eyes."
-          </blockquote>
-          <figcaption class="testi__name">Tariq Almeida</figcaption>
-          <div class="testi__meta">Repeat Guest · Twelve Orders</div>
-        </figure>
-
-        <figure class="testi">
-          <div class="testi__stars" aria-label="Five out of five stars">★ ★ ★ ★ ★</div>
-          <blockquote class="testi__quote">
-            "Quietly the best cake in the country. Chebel doesn't shout —
-            they simply make every other patisserie feel a little ordinary."
-          </blockquote>
-          <figcaption class="testi__name">Noor &amp; Adrien Sayegh</figcaption>
-          <div class="testi__meta">Wedding · Bespoke Order</div>
-        </figure>
-
+<!-- ===== STORY ===== -->
+<section class="story" id="story" aria-label="Our Story">
+  <div class="container story__inner">
+    <div class="reveal">
+      <span class="eyebrow">— Our Story —</span>
+      <h2 class="story__title">Born in Beirut,<br /><em>inspired by memory.</em></h2>
+      <p class="story__lede">
+        Founded in 2019 by Yara Chebel, the Maison is a quiet pursuit of the perfect
+        bite — a way of returning to the flavours of childhood through the discipline
+        of European patisserie.
+      </p>
+      <p class="story__lede">
+        Every recipe begins with a question: what does this remind us of? We work
+        backwards from the flavour of memory until the cake feels familiar.
+      </p>
+      <div class="story__sig">
+        <div>
+          <div class="story__sig-name">— Yara Chebel</div>
+          <span class="story__sig-role">Chef &amp; Founder</span>
+        </div>
       </div>
     </div>
 
-    <div class="testi__nav">
-      <button class="testi__btn" id="testi-prev" aria-label="Previous testimonial">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 6l-6 6 6 6"/></svg>
-      </button>
-      <div class="testi__dots" id="testi-dots" role="tablist" aria-label="Choose testimonial"></div>
-      <button class="testi__btn" id="testi-next" aria-label="Next testimonial">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
-      </button>
+    <div class="story__photo reveal" data-delay="1">
+      <div class="story__cap"><span>The Atelier</span>Yara &amp; the morning service.</div>
     </div>
   </div>
 </section>
 
-<!-- CUSTOM CAKES CTA -->
-<section class="custom" id="custom" aria-label="Custom orders">
-  <div class="container custom__inner">
-    <span class="eyebrow reveal" style="color:var(--c-gold);">— By Commission —</span>
-    <h2 class="reveal" data-delay="1">Planning a <em>Celebration?</em></h2>
-    <p class="reveal" data-delay="2">
-      From intimate dinners to bespoke wedding showpieces, our chefs design
-      cakes around your story. We accept a limited number of commissions
-      each week — reserve early.
-    </p>
-
-    <div class="reveal" data-delay="3">
-      <a href="mailto:bonjour@chebel.co" class="btn btn--solid" style="padding:20px 36px;font-size:13px;">
-        Order a Custom Cake <span class="arrow"></span>
-      </a>
+<!-- ===== NEWSLETTER ===== -->
+<section class="news" id="join" aria-label="Newsletter">
+  <div class="container news__inner">
+    <div class="reveal">
+      <span class="eyebrow on-dark">— Quiet Letters —</span>
+      <h2 style="margin-top: 10px;">The carte, the Atelier,<br /><em>delivered slowly.</em></h2>
+      <p class="news__copy">
+        A short letter once a month — new pastries, the spring &amp; autumn Reserve,
+        and the rare invitation to a tasting. No spam; never sold.
+      </p>
     </div>
-
-    <div class="custom__details reveal" data-delay="3">
-      <div><strong>72 hrs</strong>Minimum Lead Time</div>
-      <div><strong>From $180</strong>Bespoke Designs</div>
-      <div><strong>Citywide</strong>Same-Day Delivery</div>
+    <div class="reveal" data-delay="1">
+      <form class="news__form" onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('button').textContent='Merci ✓';">
+        <input type="email" placeholder="you@correspondance.com" aria-label="Email address" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="news__fine">By subscribing you agree to receive occasional letters from Chebel Patisserie.</p>
     </div>
   </div>
 </section>
 
-<!-- GALLERY -->
-<section class="gallery" id="gallery" aria-label="Gallery">
-  <div class="container">
-    <div class="gallery__head">
-      <div class="reveal">
-        <span class="eyebrow">— From the Kitchen —</span>
-        <h2 style="margin-top:18px;">A diary of <em style="font-style:italic;color:var(--c-gold);font-weight:500;">small luxuries.</em></h2>
-      </div>
-      <a class="gallery__handle reveal" data-delay="1" href="#">@chebel.patisserie ↗</a>
-    </div>
-
-    <div class="gallery__scroll reveal" data-delay="1">
-      <div class="gallery__tile" style="background-image:url('https://images.unsplash.com/photo-1607478900766-efe13248b125?auto=format&fit=crop&w=900&q=80');"><span>Ganache, poured.</span></div>
-      <div class="gallery__tile" style="background-image:url('https://images.unsplash.com/photo-1542124948-dc391252a940?auto=format&fit=crop&w=900&q=80');"><span>Macarons, just rested.</span></div>
-      <div class="gallery__tile" style="background-image:url('https://images.unsplash.com/photo-1602351447937-745cb720612f?auto=format&fit=crop&w=900&q=80');"><span>The Velour Rouge.</span></div>
-      <div class="gallery__tile" style="background-image:url('https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=900&q=80');"><span>A studied slice.</span></div>
-      <div class="gallery__tile" style="background-image:url('https://images.unsplash.com/photo-1599785209707-a456fc1337f7?auto=format&fit=crop&w=900&q=80');"><span>Saturday windows.</span></div>
-      <div class="gallery__tile" style="background-image:url('https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=900&q=80');"><span>Plated, by candlelight.</span></div>
-      <div class="gallery__tile" style="background-image:url('https://images.unsplash.com/photo-1612203985729-70726954388c?auto=format&fit=crop&w=900&q=80');"><span>Pistachio &amp; Rose.</span></div>
-      <div class="gallery__tile" style="background-image:url('https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=900&q=80');"><span>Midnight, boxed.</span></div>
-    </div>
-  </div>
-</section>
-</main>
-
-<!-- FOOTER -->
+<!-- ===== FOOTER ===== -->
 <footer class="foot" aria-label="Footer">
   <div class="container">
     <div class="foot__top">
-      <div class="foot__col foot__col--brand">
-        <div class="foot__brand-mark">C</div>
+      <div class="foot__brand">
+        <div class="foot__mono">C</div>
         <div class="foot__brand-name">Chebel</div>
-        <div class="foot__tag">No substitutes, no compromise.</div>
-        <p style="color:rgba(232,221,245,.6);max-width:38ch;margin-top:20px;">
-          Handcrafted celebration cakes, brownies, and nostalgic desserts.
-          Composed in small batches since 2019.
+        <div class="foot__brand-sub">Maison · Beirut</div>
+        <p class="foot__brand-copy">
+          A small-batch maison of celebration cakes, brownies and nostalgic desserts,
+          composed by hand in Mar Mikhaël since 2019.
         </p>
-        <div class="foot__social">
-          <a href="#" aria-label="Instagram">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
-              <rect x="3" y="3" width="18" height="18" rx="4"/>
-              <circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/>
-            </svg>
-          </a>
-          <a href="#" aria-label="WhatsApp">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
-              <path d="M21 12a9 9 0 1 1-3.5-7.1L21 4l-1 3.4A9 9 0 0 1 21 12z"/>
-              <path d="M8.5 9.5c.5 2 2 3.5 4 4 .8.2 1.7-.2 2-1l.5-1-2-1-.7.7c-.7-.4-1.3-1-1.7-1.7l.7-.7-1-2-1 .5c-.8.3-1.2 1.2-1 2z" fill="currentColor"/>
-            </svg>
-          </a>
-          <a href="#" aria-label="Pinterest">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
-              <circle cx="12" cy="12" r="9"/>
-              <path d="M12 7c2.5 0 4 1.5 4 3.8 0 2.4-1.6 4.2-3.6 4.2-.7 0-1.3-.4-1.5-.8M10.5 13l-1.5 6"/>
-            </svg>
-          </a>
-        </div>
       </div>
 
       <div class="foot__col">
-        <h4>Shop</h4>
+        <h4>The Maison</h4>
         <ul>
-          <li><a href="#collections">Birthday Cakes</a></li>
-          <li><a href="#collections">Brownies</a></li>
-          <li><a href="#collections">Celebration Cakes</a></li>
-          <li><a href="#collections">Seasonal Specials</a></li>
-          <li><a href="#custom">Custom Orders</a></li>
-        </ul>
-      </div>
-
-      <div class="foot__col">
-        <h4>House</h4>
-        <ul>
-          <li><a href="#about">Our Story</a></li>
-          <li><a href="#about">Ingredients</a></li>
-          <li><a href="#">Press</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Stockists</a></li>
+          <li><a href="#carte">La Carte</a></li>
+          <li><a href="#signature">Signatures</a></li>
+          <li><a href="#process">The Process</a></li>
+          <li><a href="#story">Our Story</a></li>
         </ul>
       </div>
 
       <div class="foot__col">
         <h4>Visit</h4>
         <ul>
-          <li>42 Rue des Cèdres</li>
-          <li>Beirut · Mar Mikhaël</li>
-          <li><a href="tel:+9611200819">+961 1 200 819</a></li>
+          <li><a href="#visit">Atelier · Beirut</a></li>
+          <li><a href="#visit">Opening Hours</a></li>
+          <li><a href="#visit">Private Tastings</a></li>
+          <li><a href="#visit">Press &amp; Stockists</a></li>
+        </ul>
+      </div>
+
+      <div class="foot__col">
+        <h4>Contact</h4>
+        <ul>
           <li><a href="mailto:bonjour@chebel.co">bonjour@chebel.co</a></li>
-          <li>Tue – Sun · 10 – 20h</li>
+          <li><a href="tel:+9611200819">+961 1 200 819</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">WhatsApp</a></li>
         </ul>
       </div>
     </div>
 
-    <div class="foot__bottom">
-      <div>© MMXXVI Chebel Patisserie</div>
-      <div>Composed with patience in Beirut.</div>
+    <hr class="foot__rule" />
+
+    <div class="foot__legal">
+      <span>© MMXXVI Chebel Patisserie. Composed with patience.</span>
+      <span style="display:inline-flex;gap:22px;flex-wrap:wrap;">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Allergens</a>
+      </span>
     </div>
   </div>
 </footer>
 
+</main>
+
 <script>
-  // Nav + topbar scroll state
-  const nav    = document.getElementById('nav');
-  const topbar = document.getElementById('topbar');
-  const onScroll = () => {
-    const scrolled = window.scrollY > 32;
-    nav.classList.toggle('is-scrolled', scrolled);
-    if (topbar) topbar.classList.toggle('is-tucked', scrolled);
-  };
+  // Sticky nav state
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 24);
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  // Hamburger / mobile menu
-  const hamb = document.getElementById('hamburger');
-  const mm   = document.getElementById('mobile-menu');
-  hamb.addEventListener('click', () => {
-    const open = hamb.classList.toggle('is-open');
-    mm.classList.toggle('is-open', open);
-    mm.setAttribute('aria-hidden', String(!open));
-    hamb.setAttribute('aria-expanded', String(open));
+  // Mobile drawer
+  const burger = document.getElementById('burger');
+  const drawer = document.getElementById('drawer');
+  const overlay = document.getElementById('drawer-overlay');
+  function setDrawer(open) {
+    burger.classList.toggle('is-open', open);
+    drawer.classList.toggle('is-open', open);
+    overlay.classList.toggle('is-open', open);
+    drawer.setAttribute('aria-hidden', String(!open));
+    burger.setAttribute('aria-expanded', String(open));
     document.body.style.overflow = open ? 'hidden' : '';
-  });
-  mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    hamb.classList.remove('is-open');
-    mm.classList.remove('is-open');
-    mm.setAttribute('aria-hidden', 'true');
-    hamb.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
-  }));
+  }
+  burger.addEventListener('click', () => setDrawer(!drawer.classList.contains('is-open')));
+  overlay.addEventListener('click', () => setDrawer(false));
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setDrawer(false)));
 
-  // Scroll reveal
+  // Carte tabs (visual toggle only)
+  document.querySelectorAll('.carte__tab').forEach(t => {
+    t.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.querySelectorAll('.carte__tab').forEach(x => {
+        x.classList.remove('is-active');
+        x.setAttribute('aria-selected', 'false');
+      });
+      t.classList.add('is-active');
+      t.setAttribute('aria-selected', 'true');
+    });
+  });
+
+  // Reveal on scroll
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+      if (e.isIntersecting) {
+        e.target.classList.add('is-in');
+        io.unobserve(e.target);
+      }
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-  // Testimonial carousel
-  const track    = document.getElementById('testi-track');
-  const slides   = track.children;
-  const total    = slides.length;
-  const dotsWrap = document.getElementById('testi-dots');
-  let idx = 0, timer;
-
-  for (let i = 0; i < total; i++) {
-    const b = document.createElement('button');
-    b.className = 'testi__dot';
-    b.setAttribute('role', 'tab');
-    b.setAttribute('aria-label', 'Show testimonial ' + (i + 1));
-    b.addEventListener('click', () => go(i, true));
-    dotsWrap.appendChild(b);
-  }
-
-  function go(n, fromUser) {
-    idx = (n + total) % total;
-    track.style.transform = `translateX(-${idx * 100}%)`;
-    [...dotsWrap.children].forEach((d, i) => d.classList.toggle('is-active', i === idx));
-    if (fromUser) restart();
-  }
-  function next() { go(idx + 1); }
-  function prev() { go(idx - 1); }
-  function restart() { clearInterval(timer); timer = setInterval(next, 6500); }
-
-  document.getElementById('testi-prev').addEventListener('click', () => { prev(); restart(); });
-  document.getElementById('testi-next').addEventListener('click', () => { next(); restart(); });
-
-  go(0);
-  restart();
-
-  // Pause carousel when offscreen
-  const tsection = document.querySelector('.testimonials');
-  const tio = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) restart(); else clearInterval(timer); });
-  }, { threshold: 0.2 });
-  tio.observe(tsection);
 </script>
 </body>
 </html>
